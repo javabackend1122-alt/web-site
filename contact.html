@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Əlaqə və Rəylər - CDPTM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact_style.css">
+</head>
+<body>
+
+    <div class="contact-container">
+        <div class="contact-header">
+            <h2 class="page-title"><i class="fa-solid fa-headset"></i> Bizimlə Əlaqə və Canlı Müraciət</h2>
+            <p class="page-subtitle">Fikir, rəy və təkliflərinizi bizə yazın, qısa zamanda cavablandıraq.</p>
+        </div>
+
+        <div class="contact-wrapper">
+            
+            <div class="contact-info-box">
+                <div class="info-card">
+                    <div class="info-card__icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="info-card__text">
+                        <h3>Ünvanımız</h3>
+                        <p>Göytəpə şəh., Oqtay Eynullayev küç. 2</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-card__icon"><i class="fas fa-phone-alt"></i></div>
+                    <div class="info-card__text">
+                        <h3>Telefon</h3>
+                        <p>+994 51 553 01 03</p>
+                    </div>
+                </div>
+
+                <div class="info-card info-card--whatsapp">
+                    <div class="info-card__icon"><i class="fab fa-whatsapp"></i></div>
+                    <div class="info-card__text">
+                        <h3>WhatsApp Canlı Dəstək</h3>
+                        <p><a href="https://wa.me/994504125795" target="_blank">Bizə birbaşa yazın <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                   </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-card__icon"><i class="fas fa-envelope"></i></div>
+                    <div class="info-card__text">
+                        <h3>Rəsmi E-poçt</h3>
+                        <p><a href="mailto:calilabad@vet.edu.az">calilabad@vet.edu.az</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-map">
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2636.011390569794!2d48.61050345110895!3d39.11786096707299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4023317849e38405%3A0x2bd10e98ba5aa917!2zQ8mZbGlsYWJhZCBEw7Z2bMmZdCBQZcWfyZkgVMmZaHNpbCBNyZlya8mZemk!5e1!3m2!1saz!2saz!4v1779634495611!5m2!1saz!2saz" width="100%" height="200" style="border:0; border-radius: 14px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="contact-form-box">
+                <h3><i class="fas fa-comments"></i> Rəy və Təklif Forması</h3>
+                <p class="form-desc">Mərkəzimizin fəaliyyəti barədə fikirlərinizi bölüşün:</p>
+                
+                <form id="feedbackForm">
+                    <div class="form-group">
+                        <label for="userName">Adınız və Soyadınız</label>
+                        <input type="text" id="userName" class="form-control" placeholder="Məsələn: Nicat Əliyev" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="userEmail">E-poçt ünvanınız</label>
+                        <input type="email" id="userEmail" class="form-control" placeholder="name@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="messageType">Müraciətin növü</label>
+                        <select id="messageType" class="form-control" required>
+                            <option value="teklif">💡 Təklif</option>
+                            <option value="irad">⚠️ İrad / Şikayət</option>
+                            <option value="sual">💬 Sual / Canlı Dəstək</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="userMessage">Mesajınız / Fikrininiz</label>
+                        <textarea id="userMessage" class="form-control" rows="4" placeholder="Fikirlərinizi bura ətraflı qeyd edin..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <span>Müraciəti Göndər</span> <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+                
+                <div id="formSuccess" class="form-success-message" style="display: none;">
+                    <i class="fas fa-check-circle"></i> Təşəkkür edirik! Rəyiniz qəbul edildi və administrator panelinə yönləndirildi.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="contact.js"></script>
+</body>
+</html>

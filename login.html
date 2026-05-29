@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş - Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+
+    <div class="auth-container">
+        <div class="auth-box">
+            <div>
+                <i class="fa-solid fa-user-plus"></i>
+            </div>
+            
+            <h2 class="auth-box__title">Portal Girişi</h2>
+            <p class="auth-box__subtitle">Cəlilabad Dövlət Peşə Təhsil Mərkəzi</p>
+            
+            <div id="statusMessage" class="status-message" style="display: none;"></div>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="usernameInput"><i class="fas fa-user"></i> İstifadəçi adı</label>
+                    <input type="text" id="usernameInput" class="form-control" placeholder="İstifadəçi adınızı daxil edin" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="passwordInput"><i class="fas fa-lock"></i> Şifrə</label>
+                    <input type="password" id="passwordInput" class="form-control" placeholder="••••••••" required>
+                </div>
+
+                <button type="submit" class="btn btn--primary btn--block">
+                    <span>Daxil Ol</span> <i class="fas fa-sign-in-alt"></i>
+                </button>
+            </form>
+
+            <div class="auth-box__footer">
+                <a href="register.html"><i class="fa-solid fa-user-plus"></i> Hesabınız yoxdur? Qeydiyyatdan keçin</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>

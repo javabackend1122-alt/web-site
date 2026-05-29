@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDPTM - Tələbə Portalı</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard_style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h2><i class="fa-solid fa-graduation-cap" style="color: #10b981;"></i> CDPTM <span class="badge--student" style="background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 11px; padding: 3px 10px; border-radius: 20px; font-weight: 700; text-transform: uppercase;">Tələbə</span></h2>
+        </div>
+        <div class="nav-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="panelSearch" placeholder="Material və ya başlıq axtar...">
+        </div>
+        <div class="nav-profile">
+            <div class="user-info">
+                <div class="user-info__name" id="navStudentName">Yüklənir...</div>
+                <div class="user-info__id" id="navStudentId">ID: TEL-000</div>
+            </div>
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120" id="navStudentAvatar" class="user-avatar" alt="Tələbə">
+            <button class="logout-btn" onclick="location.href='login.html'"><i class="fa-solid fa-arrow-right-from-bracket"></i> Çıxış</button>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        
+        <div class="welcome-card" style="background: linear-gradient(135deg, #064e3b, #111827);">
+            <h1 id="welcomeTitle">Salam!</h1>
+            <p>Şəxsi kabinetin vasitəsilə dərslərini izləyə, mərkəzi materialları oxuya və FAQ vasitəsilə adminlərlə canlı əlaqə saxlaya bilərsən.</p>
+        </div>
+
+        <div class="dashboard-grid">
+            
+            <aside class="profile-sidebar" style="position: relative;">
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: linear-gradient(to right, #10b981, #059669); border-radius: 20px 20px 0 0;"></div>
+                
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120" id="studentAvatar" class="profile-sidebar__img" alt="Tələbə">
+                <h3 class="profile-sidebar__name" id="sidebarStudentName">Yüklənir...</h3>
+                <p class="profile-sidebar__role" style="color: #10b981; font-weight: 600; font-size: 13px; margin-top: 4px;">Mərkəz Tələbəsi</p>
+                
+                <div class="profile-bio">
+                    CDPTM rəqəmsal təhsil platformasının aktiv istifadəçisi. Şəxsi akademik göstəricilər və qrup məlumatları aşağıda qeyd olunmuşdur.
+                </div>
+
+                <div class="profile-details">
+                    <div class="profile-detail-item"><span>Tədris Qrupu</span><strong id="studentGroup">Yüklənir...</strong></div>
+                    <div class="profile-detail-item"><span>Ümumi GPA</span><strong id="studentGpa" style="color: #10b981;">Yüklənir...</strong></div>
+                    <div class="profile-detail-item"><span>Şəxsi E-mail</span><strong id="studentEmail">Yüklənir...</strong></div>
+                </div>
+            </aside>
+
+            <main class="main-panel">
+                <div class="modules-grid">
+                    
+                    <div class="module-card">
+                        <div class="module-card__icon" style="color: #10b981; background: rgba(16, 185, 129, 0.08);"><i class="fa-solid fa-utensils"></i></div>
+                        <h3>Günlük Menyu</h3>
+                        <p>Tələbə yeməkxanasının bugünkü rəsmi qida tədarükü siyahısı.</p>
+                    </div>
+                    
+                    <div class="module-card">
+                        <div class="module-card__icon" style="color: #a855f7; background: rgba(168, 85, 247, 0.08);"><i class="fa-solid fa-book"></i></div>
+                        <h3>Rəqəmsal Kitablar</h3>
+                        <p>Elektron dərsliklər, mühazirələr və sərbəst oxu materialları.</p>
+                    </div>
+                    
+                    <div class="module-card active-trigger" id="studentFaqTrigger" style="border: 1px solid rgba(16, 185, 129, 0.25);">
+                        <div class="module-card__icon" style="background: rgba(16, 185, 129, 0.1); color: #10b981;"><i class="fa-solid fa-circle-question"></i></div>
+                        <h3>FAQ (Sual-Cavab)</h3>
+                        <p>Adminlərin təsdiqlədiyi rəsmi cavablar və yeni sual göndərmə sahəsi.</p>
+                    </div>
+                    
+                </div>
+
+                <section class="live-panel-section" id="studentFaqSection" style="border-color: rgba(16, 185, 129, 0.15); display: none; margin-top: 30px;">
+                    
+                    <div class="panel-block" style="background: var(--bg-card); padding: 20px; border-radius: 12px; margin-bottom: 25px; border: 1px solid rgba(255,255,255,0.02);">
+                        <h3 style="color: #10b981; font-size: 15px; margin-bottom: 6px;"><i class="fa-solid fa-paper-plane"></i> Admin Heyətinə Sual Göndər</h3>
+                        <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">Yazdığınız sual admin panelindəki gözləmə zalına düşəcək.</p>
+                        <textarea id="newQuestionText" rows="2" style="width:100%; background:var(--bg-main); border:1px solid rgba(255,255,255,0.08); color:white; padding:12px; border-radius:8px; font-size:13px; resize:none; outline:none;" placeholder="Sualınızı bura qeyd edin..."></textarea>
+                        <button id="submitQuestionBtn" style="background: #10b981; color: white; border: none; padding: 8px 18px; border-radius: 8px; margin-top: 10px; cursor: pointer; font-size: 12.5px; font-weight: 700; float: right; transition: opacity 0.2s;">Sualı Göndər</button>
+                        <div style="clear: both;"></div>
+                    </div>
+
+                    <div class="panel-block">
+                        <h3 style="color: var(--text-white); font-size: 15px; margin-bottom: 15px;"><i class="fa-solid fa-comments"></i> Aktiv Sual-Cavab Siyahısı</h3>
+                        <div id="studentFaqContainer"></div>
+                    </div>
+                    
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="telebe_dashboard.js"></script>
+</body>
+</html>

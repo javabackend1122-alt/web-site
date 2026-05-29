@@ -1,0 +1,601 @@
+  /* YEMƏKXANA PLATFORMASI - LÜKS QIZILI İTALİYAN STİLİ CSS*/
+
+:root {
+    --gold-primary: #d4af37;
+    --gold-dark: #aa7c11;
+    --gold-glow: rgba(212, 175, 55, 0.2);
+    --bg-dark: #090d16;
+    --card-bg: #131c2e;
+    --text-light: #f8fafc;
+    --text-muted: #94a3b8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #020617;
+    color: var(--text-light);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 30px 15px;
+}
+
+.menu-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+}
+
+.canteen-logo-zone {
+    font-size: 48px;
+    color: #d4af37; 
+    margin-bottom: 15px;
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+    display: inline-block;
+}
+
+.menu-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    color: #d4af37; 
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.menu-subtitle {
+    font-size: 14px;
+    color: #94a3b8; 
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.menu-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--bg-dark);
+    padding: 40px;
+    border-radius: 28px;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+}
+
+.menu-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    padding-bottom: 15px;
+}
+
+.btn-back {
+    background: none;
+    border: 1px solid var(--gold-primary);
+    color: var(--gold-primary);
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-back:hover {
+    background-color: var(--gold-primary);
+    color: var(--bg-dark);
+}
+
+.user-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--gold-primary);
+}
+
+.role-pill {
+    background-color: var(--gold-primary);
+    color: var(--bg-dark);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.menu-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.menu-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: var(--gold-primary);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+}
+
+.menu-subtitle {
+    font-size: 14px;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.menu-category-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: var(--gold-primary);
+    border-left: 3px solid var(--gold-primary);
+    padding-left: 12px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 30px;
+}
+
+.menu-card {
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.12);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold-primary);
+    box-shadow: 0 15px 30px var(--gold-glow);
+}
+
+.menu-card__image-wrapper {
+    position: relative;
+    height: 210px;
+    overflow: hidden;
+}
+
+.menu-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.menu-card:hover .menu-card__img {
+    transform: scale(1.06);
+}
+
+.menu-card__badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(9, 13, 22, 0.85);
+    color: var(--gold-primary);
+    border: 1px solid var(--gold-primary);
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(5px);
+}
+
+.menu-card__info {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.menu-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.menu-card__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--gold-primary);
+}
+
+.menu-card__price {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--gold-primary);
+}
+
+.menu-card__ingredients {
+    font-size: 13px;
+    color: #a0aec0;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.menu-card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(212, 175, 55, 0.08);
+    padding-top: 14px;
+}
+
+.menu-card__stars {
+    color: var(--gold-primary);
+    font-size: 11px;
+}
+
+.menu-card__popularity-score {
+    font-size: 12px;
+    color: var(--gold-primary);
+    font-weight: 600;
+}
+
+/* ADMİN FORMA PANELİ STİLLƏRİ */
+.admin-menu-form {
+    background-color: rgba(19, 28, 46, 0.5);
+    border: 1px solid var(--gold-primary);
+    padding: 25px;
+    border-radius: 18px;
+    margin-bottom: 40px;
+}
+
+.admin-menu-form h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--gold-primary);
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.admin-menu-form .form-group label {
+    display: block;
+    font-size: 12px;
+    color: var(--gold-primary);
+    margin-bottom: 6px;
+}
+
+.admin-menu-form input,
+.admin-menu-form select,
+.admin-menu-form textarea {
+    width: 100%;
+    background-color: #090d16;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    color: var(--text-light);
+    padding: 10px 12px;
+    border-radius: 8px;
+    outline: none;
+}
+
+.admin-menu-form input:focus,
+.admin-menu-form select:focus,
+.admin-menu-form textarea:focus {
+    border-color: var(--gold-primary);
+}
+
+.btn-gold {
+    width: 100%;
+    margin-top: 15px;
+    background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+    color: #020617;
+    border: none;
+    padding: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+:root {
+    --nav-bg: rgba(11, 17, 32, 0.85);          /* Şüşə effekti üçün zərif tünd fon */
+    --border-glow: rgba(16, 185, 129, 0.15);   /* Emerald neon parıltısı */
+    --border-subtle: rgba(255, 255, 255, 0.08); /* İncə daxili sərhəd */
+    --text-pure: #ffffff;
+    --text-muted: #94a3b8;
+    --emerald-neon: #10b981;
+    --amber-neon: #fbbf24;
+    --blue-neon: #3b82f6;
+    --font-main: 'Plus Jakarta Sans', sans-serif;
+}
+
+.premium-nav {
+    background: var(--nav-bg);
+    backdrop-filter: blur(14px) saturate(180%);
+    -webkit-backdrop-filter: blur(14px) saturate(180%);
+    border-bottom: 1px solid var(--border-subtle);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3), 
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 14px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 220px;
+}
+
+.canteen-logo-zone {
+    background: linear-gradient(135deg, var(--emerald-neon), #059669);
+    color: var(--text-pure);
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Logoya zərif işıq keçidi effekti */
+.canteen-logo-zone::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 30%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.24);
+    transform: rotate(30deg);
+    transition: none;
+}
+
+.nav-left:hover .canteen-logo-zone::after {
+    left: 160%;
+    transition: all 0.6s ease-in-out;
+}
+
+.brand-info h2 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--text-pure);
+    font-family: var(--font-main);
+    letter-spacing: -0.3px;
+}
+
+.brand-info span {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 500;
+    display: block;
+    margin-top: 2px;
+}
+
+.nav-menu-center-hub {
+    background: rgba(30, 41, 59, 0.45);
+    border: 1px solid var(--border-subtle);
+    padding: 6px 20px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    max-width: 600px;
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Aktiv Menyu Nişanı */
+.hub-badge {
+    background: rgba(245, 158, 11, 0.12);
+    color: var(--amber-neon);
+    font-size: 10px;
+    font-weight: 800;
+    padding: 5px 12px;
+    border-radius: 30px;
+    letter-spacing: 0.8px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    white-space: nowrap;
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    text-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
+}
+
+/* Animasiya Maskası */
+.hub-animation-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Sol və Sağ kənarlardan zərif itmə (fade) effekti */
+.hub-animation-wrapper::before,
+.hub-animation-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+.hub-animation-wrapper::before { left: 0; background: linear-gradient(to right, #0e1726, transparent); }
+.hub-animation-wrapper::after { right: 0; background: linear-gradient(to left, #0e1726, transparent); }
+
+/* Sonsuz Sürüşən Siyahı Xətti */
+.hub-dishes-track {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    animation: smoothMarquee 22s linear infinite;
+    width: max-content;
+    padding-left: 50%;
+}
+
+.hub-dish-item {
+    font-size: 13px;
+    font-weight: 600;
+    color: #e2e8f0;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s;
+}
+
+.hub-dish-item i {
+    color: var(--emerald-neon);
+    font-size: 14px;
+    filter: drop-shadow(0 0 4px rgba(16, 185, 129, 0.4));
+}
+
+/* Siçan üzərinə gələndə dayanma və parlaqlıq */
+.nav-menu-center-hub:hover .hub-dishes-track {
+    animation-play-state: paused;
+}
+
+.nav-menu-center-hub:hover {
+    border-color: rgba(16, 185, 129, 0.3);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.08);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 280px;
+    justify-content: flex-end;
+}
+
+.nav-search-box {
+    position: relative;
+    width: 220px;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-search-box i {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 13px;
+    transition: color 0.2s;
+}
+
+.nav-search-box input {
+    width: 100%;
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid var(--border-subtle);
+    padding: 9px 14px 9px 38px;
+    border-radius: 24px;
+    color: var(--text-pure);
+    font-size: 12.5px;
+    font-weight: 500;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Axtarış sahəsi kliklənəndə genişlənir və parıldayır */
+.nav-search-box input:focus {
+    border-color: var(--emerald-neon);
+    background: #0f172a;
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.15);
+}
+
+.nav-search-box input:focus + i {
+    color: var(--emerald-neon);
+}
+
+.nav-search-box:focus-within {
+    width: 260px; /* Fokuslananda zərif genişlənmə */
+}
+
+/* Minimalist Geri Düyməsi */
+.back-btn {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-pure);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--text-muted);
+    transform: translateX(-2px);
+}
+
+@keyframes smoothMarquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav-menu-center-hub {
+        display: none; /* Planşet və mobil cihazlarda mərkəz gizlənir, ekran təmiz qalır */
+    }
+    .nav-search-box, .nav-search-box:focus-within {
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .brand-info span {
+        display: none; /* Çox kiçik ekranlarda alt yazını gizlət */
+    }
+    .nav-container {
+        padding: 10px 16px;
+    }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDPTM - İnteraktiv Sual-Cavab Portalı</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="faq_style.css">
+</head>
+<body>
+
+    <div id="toastNotification" class="toast-notification hidden">
+        <div class="toast-content">
+            <i class="fa-solid fa-circle-check toast-icon"></i>
+            <div class="toast-text">
+                <span class="toast-title">Uğurlu əməliyyat!</span>
+                <span class="toast-desc">Sualınız göndərildi, admin təsdiqi gözlənilir.</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-container">
+        
+        <header class="faq-header">
+            <div class="faq-badge"><i class="fa-solid fa-comments"></i> İNTERAKTİV DƏSTƏK</div>
+            <h1>Sual-Cavab Portalı</h1>
+            <p class="faq-subtitle">Mərkəzimiz barədə maraqlandığınız sualları ünvanlayın və ya mövcud rəsmi cavablarla tanış olun.</p>
+        </header>
+
+        <div class="faq-main-layout">
+            
+            <aside class="faq-sidebar">
+                <div class="sual-form-card">
+                    <h3><i class="fa-solid fa-pen-to-square"></i> Yeni Sual Ünvanla</h3>
+                    <p class="form-tip">Yazdığınız suallar idarəçi tərəfindən yoxlanıldıqdan sonra cavablandırılaraq ümumi siyahıya əlavə olunur.</p>
+                    <form id="sualForm">
+                        <div class="form-group">
+                            <label for="username">Adınız və Soyadınız</label>
+                            <input type="text" id="username" placeholder="Məs: Əli Məmmədov" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="userQuestion">Sualınız</label>
+                            <textarea id="userQuestion" rows="4" placeholder="Sualınızı bura ətraflı şəkildə qeyd edin..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-gonder">Sualı Göndər <i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </aside>
+
+            <main class="faq-main-content">
+                <div class="section-title-wrapper">
+                    <h3><i class="fa-solid fa-clipboard-question"></i> Tez-tez Verilən Suallar</h3>
+                    <span class="faq-count-badge" id="faqCount">0 Sual</span>
+                </div>
+                
+                <div class="faq-accordion" id="faqAccordion">
+                    </div>
+            </main>
+
+        </div>
+
+        <hr class="section-divider">
+
+        <section class="admin-section">
+            <div class="admin-header">
+                <div class="admin-title-group">
+                    <h3><i class="fa-solid fa-user-shield"></i> Mərkəz İdarəçi Paneli</h3>
+                    <p class="admin-subtitle">Daxil olan tələbə suallarını redaktə edin və cavablandırın</p>
+                </div>
+                <button id="toggleAdminBtn" class="btn-admin-toggle">Gələn Suallar (0)</button>
+            </div>
+            
+            <div id="adminPanelContent" class="admin-panel-content hidden">
+                <div class="incoming-questions-list" id="incomingQuestions">
+                    </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="faq_core.js"></script>
+</body>
+</html>

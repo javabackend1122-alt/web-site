@@ -1,76 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="az">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Cəlilabad Dövlət Peşə Təhsil Mərkəzi">
-
     <title>Cəlilabad Dövlət Peşə Təhsil Mərkəzi</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
+     <header class="header">
         <nav class="navbar">
             <div class="container navbar__inner">
-                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthfvnext.bing.com%2Fth%2Fid%2FOIP.qb5qjpJeD3wZvt6N-_HKcQHaHZ%3Fcb%3Dthfvnextfalcon%26pid%3DApi&f=1&ipt=966b53990b7387a9bc4f9e1b3b573ee18f2f3e838918e963cd9c0bc9be66879e&ipo=images" alt="">
-
+                
+                <div class="nav-left-brand">
+                    <div class="animated-school-badge">
+                        <i class="fa-solid fa-graduation-cap pulse-icon"></i>
+                        <div class="badge-glow-ring"></div>
+                    </div>
+                    <div class="school-brand-text">
+                        <h2 class="sliding-text">Cəlilabad DPTM</h2>
+                        <span class="sub-digital-text"><i class="fa-solid fa-bolt"></i> Rəqəmsal Portal</span>
+                    </div>
+                </div>
+   
                 <ul class="nav-menu">
-                    <li class="nav-menu__item"><a href="#haqqimizda" class="nav-menu__link">Haqqımızda</a></li>
-                    <li class="nav-menu__item"><a href="#fotolar" class="nav-menu__link">Fotolar</a></li>
-                    <li class="nav-menu__item"><a href="#videolar" class="nav-menu__link">Videolar</a></li>
-                    <li class="nav-menu__item"><a href="#elaqə" class="nav-menu__link">Əlaqə</a></li>
-                </ul>
+                    <li><a href="index.html" class="nav-menu__link active-link">Ana Səhifə</a></li>
+                    
+                    <li><a href="#" id="dynamicPortalBtn" class="btn btn--secondary" style="display: none; background-color: #38bdf8; color: #0f172a; font-weight: bold;">Mənim Platformam</a></li>
 
-                <a href="#qeydiyyat" class="btn btn--primary">Qeydiyyatdan Keçin</a>
+                    <li class="dropdown">
+                       <a href="#" class="dropbtn">Platformalar ▾</a>
+                       <div class="dropdown-content">
+                         <a href="yemekxana_platformasu.html"><i class="fa-solid fa-utensils"></i> Yeməkxana Platforması</a>
+                         <a href="kitabxana.html"><i class="fa-solid fa-book"></i> Kitabxana Platforması</a>
+                       </div>
+                    </li>
+                    
+                    <li><a href="#fotolar" class="btn btn--primary">Fotolar</a></li>
+                    <li><a href="#videolar" class="btn btn--primary">Videolar</a></li>
+                    <li><a href="xeberler.html" class="btn btn--primary">Xəbərlər</a></li>
+                    <li><a href="faq.html" class="btn btn--primary">FAQ</a></li>
+                    <li><a href="contact.html" class="btn btn--primary">Əlaqə</a></li>
+                </ul>
+                <a href="login.html" id="navSignInBtn" class="btn btn--primary">Sign in</a>
             </div>
         </nav>
     </header>
 
     <section class="hero" id="hero">
         <div class="container hero__content">
-            <h2 class="hero__title">Daha<span class="highlight"> Peşəkar</span> Gələcək</h2>
-            <p class="hero__subtitle">Bu gün aqrar inkişafın əsas komponentlərindən biri peşəkar insan kapitalıdır</p>
-        </div>
-        <div class="search-box">
-            <input type="text" id="searchInput" class="search-box__input" placeholder="   Search">
-            <button class="search-box__btn"><i class="fas fa-search"></i></button>
-        </div>
+            <span style="display: inline-block; background: rgba(56, 189, 248, 0.15); color: #38bdf8; padding: 6px 16px; border-radius: 50px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; border: 1px solid rgba(56, 189, 248, 0.3);">
+                Cəlilabad Dövlət Peşə Təhsil Mərkəzi
+            </span>
+            
+            <h1 class="hero__title" style="font-size: 48px; max-width: 800px; margin: 0 auto 20px;">
+                Daha <span class="highlight">Peşəkar</span> Gələcək Naminə
+            </h1>
+            
+            <p class="hero__subtitle" style="font-size: 19px; max-width: 700px; margin-bottom: 40px; color: #cbd5e1;">
+                Bu gün aqrar və texnoloji inkişafın əsas komponentlərindən biri peşəkar insan kapitalının formalaşdırılmasıdır.
+            </p>
 
-        <div class="hero__buttons">
-             <a href="#qaydalar" class="btn btn--secondary btn--large">Qaydalar</a>
-             <a href="#qebul sertleri" class="btn btn--secondary btn--large">Təhsil Mərkəzi</a>
-             <a href="#ixtisaslar" class="btn btn--secondary btn--large">Ixtisaslar</a>
-        </div>
-    </section>
-
-    <!--<section id="haqqimizda" class="section">
-        <div class="container">
-            <h2 class="section__title">Haqqımızda</h2>
-            <div class="about-grid">
-                 
+            <div class="search-box" style="margin-bottom: 0;">
+                <input type="text" id="searchInput" class="search-box__input" placeholder="Portal üzrə axtarış...">
+                <button class="search-box__btn"><i class="fas fa-search"></i></button>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <section id="fotolar" class="section section--light">
         <div class="container">
             <h2 class="section__title">Fotolar</h2>
             <div class="gallery-grid">
-                <img src="" alt="" loading="lazy">
-                <img src="" alt="" loading="lazy">
-                <img src="" alt="" loading="lazy">
-                <img src="" alt="" loading="lazy">
-                <img src="" alt="" loading="lazy">
-                <img src="" alt="" loading="lazy">
-                <img src="" alt="" loading="lazy">
-                <img src="" alt="" loading="lazy">
-                <img src="" alt="" loading="lazy">
-                <img src="" alt="" loading="lazy">
-                <img src="" alt="" loading="lazy">
-                <img src="" alt="" loading="lazy">
-                <img src="" alt="" loading="lazy">
-                <img src="" alt="" loading="lazy">
+                <img src="http://celilabad-ih.gov.az/storage/photos/2/20%20iyul/1689846086_02554c63584e75925f2b814c6797559f.jpg" alt="" loading="lazy">
+                <img src="http://celilabad-ih.gov.az/storage/photos/2/20%20iyul/1689846092_686c902b745221eb261f1adac3ccfe22.jpg" alt="" loading="lazy">
+                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846086_30eb1f44cf12e90ab52469c6057ef032.jpg" alt="" loading="lazy">
+                <img src="http://celilabad-ih.gov.az/storage/photos/2/20%20iyul/1689846088_0588f7e2594b4dc81a83ff1ac3bcc8f9.jpg" alt="" loading="lazy">
+                <img src="http://celilabad-ih.gov.az/storage/photos/2/20%20iyul/1689846094_3cb05fceef24ff1b7e6a0231e1557ad4.jpg" alt="" loading="lazy">
+                <img src="http://celilabad-ih.gov.az/storage/photos/2/20%20iyul/1689846087_76dfca745f13544db4ef7aeb62384a8d.jpg" alt="" loading="lazy">
+                <img src="http://celilabad-ih.gov.az/storage/photos/2/20%20iyul/1689846097_bafa979cd7a1af627a6fbedbc7290dd1.jpg" alt="" loading="lazy">
+                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846089_49e8c4af4db7f012d6dd3aa59cf4f0d9.jpg" alt="" loading="lazy">
+                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846098_3228120e940e331a1617eaca61cbb023.jpg" alt="" loading="lazy">
+                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846095_faeeb8a3b33a80de135d3929a31cf5a6.jpg" alt="" loading="lazy">
+                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846099_d7bd414b61af3e8d82b050cbaa42f83b.jpg" alt="" loading="lazy">
+                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846100_1f2ca1b9b9dc32300d241fafc4454d64.jpg" alt="" loading="lazy">
+                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846101_3264d11c07e4dd82141b5d843f6babdd.jpg" alt="" loading="lazy">
+                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846102_1d379bd2b129cb503dd9c07bd20e9380.jpg" alt="" loading="lazy">
+                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846103_9a6b542b5e6431b6e01b94a8926279b5.jpg" alt="" loading="lazy">
+                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846103_ea21e5270d3ffeead6dbf93bf493d08c.jpg" alt="" loading="lazy">
+                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846104_e2b12497ce88fb284d6cf18d9c064aa3.jpg" alt="" loading="lazy">
+                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846104_15a777db5c160586c491c7e32328cf54.jpg" alt="" loading="lazy">
+                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846105_d027394a1f1f4625a11f87963b0a7cbc.jpg" alt="" loading="lazy">
+                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846106_fe7dd96f5a9cf131e61313ec7e3e9a8e.jpg" alt="" loading="lazy">
+                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846106_5bc46a835b3a04c67e669bd9f59c3984.jpg" alt="" loading="lazy">
             </div>
         </div>
     </section>
@@ -79,108 +103,61 @@
         <div class="container">
             <h2 class="section__title">Videolar</h2>
               <div class="videos-grid">
-                <div class="video-item">
-                     <iframe src="https://www.youtube.com/embed/ENbjcJ9KJBg" 
-                      title="Prezident Cəlilabad Dövlət Peşə Təhsil Mərkəzinin açılışında iştirak edib"
-                      frameborder="0"
-                      allowfullscreen></iframe>
-                </div>
-                
-                <div class="video-item">
-                    <iframe src="https://www.youtube.com/embed/mLkOQrZQjK4"
-                     title="Prezident İlham Əliyev Cəlilabad Dövlət Peşə Təhsil Mərkəzində yaradılmış şəraitlə tanış olub"
-                     frameborder="0" 
-                     allowfullscreen>
-                    </iframe>
-                </div>
-                
-                <div class="video-item">
-                    <iframe src="https://www.youtube.com/embed/5DsodB_wrcw"
-                     title="Prezident İlham Əliyev Cəlilabad Dövlət Peşə Təhsil Mərkəzinin açılışında iştirak edib"
-                     frameborder="0"
-                     allowfullscreen>
-                    </iframe>
-                </div>
-
-                <div class="video-item">
-                    <iframe src="https://www.youtube.com/embed/0bxGCGtYU-g"
-                     title="Prezident İlham Əliyev Cəlilabad Dövlət Peşə Təhsil Mərkəzinin açılışında iştirak edib"
-                     frameborder="0"
-                     allowfullscreen>
-                    </iframe>
-                </div>
-
-                <div class="video-item">
-                    <iframe src="https://www.youtube.com/embed/IpDZgyzjwRs"
-                     title="Prezident Cəlilabadda peşə məktəbinin açılışında iştirak edib"
-                     frameborder="0"
-                     allowfullscreen>
-                    </iframe>
-                </div>
-
+                <div class="video-item"><iframe src="https://www.youtube.com/embed/ENbjcJ9KJBg" title="Prezident Cəlilabad Dövlət Peşə Təhsil Mərkəzinin açılışında iştirak edib" frameborder="0" allowfullscreen></iframe></div>
+                <div class="video-item"><iframe src="https://www.youtube.com/embed/mLkOQrZQjK4" title="Prezident İlham Əliyev Cəlilabad Dövlət Peşə Təhsil Mərkəzində yaradılmış şəraitlə tanış olub" frameborder="0" allowfullscreen></iframe></div>
+                <div class="video-item"><iframe src="https://www.youtube.com/embed/5DsodB_wrcw" title="Prezident İlham Əliyev Cəlilabad Dövlət Peşə Təhsil Mərkəzinin açılışında iştirak edib" frameborder="0" allowfullscreen></iframe></div>
+                <div class="video-item"><iframe src="https://www.youtube.com/embed/0bxGCGtYU-g" title="Prezident İlham Əliyev Cəlilabad Dövlət Peşə Təhsil Mərkəzinin açılışında iştirak edib" frameborder="0" allowfullscreen></iframe></div>
+                <div class="video-item"><iframe src="https://www.youtube.com/embed/D8njrz0unqU" title="Cəlilabadda Yaradıcı zərif əllər adlı festival keçirilib" frameborder="0" allowfullscreen></iframe></div>
+                <div class="video-item"><iframe src="https://www.youtube.com/embed/m6EXNjfdJwM" title="Cəlilabad Dövlət Peşə Təhsil Mərkəzində Karyera və Peşə İmkanları Günü keçirilib" frameborder="0" allowfullscreen></iframe></div>
+                <div class="video-item"><iframe src="https://www.youtube.com/embed/rPprsf6uTLg" title="Prezident İlham Əliyev Cəlilabad Dövlət Peşə Təhsil Mərkəzinin açılışında iştirak edib" frameborder="0" allowfullscreen></iframe></div>
+                <div class="video-item"><iframe src="https://www.youtube.com/embed/M7xqJB3OCZQ" title="Lənkəran və Cəlilabad Peşə Təhsil Mərkəzlərindən xüsusi reportaj | ASAN TV" frameborder="0" allowfullscreen></iframe></div>
+                <div class="video-item"><iframe src="https://www.youtube.com/embed/HsSve2LUlVg" title="Lənkəran və Cəlilabad Dövlət Peşə Təhsil Mərkəzlərinə infotur təşkil olunub" frameborder="0" allowfullscreen></iframe></div>
               </div>
         </div>
     </section>
 
-    <section id="qaydalar" class="section">
-        <div class="container">
-           <div class="section__title">Qaydalar</div>
-
-           <div class="rules-grid">
-
-            <div class="rule-card">
-                <h3>1.Tələbə qəbulu </h3>
-                <p>Peşə təhsili müəssisələrinə tələbə qəbulu tədris ili başa çatdıqdan sonra yay aylarında elan edilir.  Peşə təhsili almaq istəyən şəxslər tələbə qəbulu elan edildikdə portal.edu.az  platformasında qeydiyyatdan keçməklə “Peşə təhsili müəssisələrinə elektron tələbə qəbulu” xidməti vasitəsilə müraciət göndərməlidirlər.</p>
+   <footer class="main-footer">
+    <div class="container footer-grid">
+        <div class="footer-col">
+            <div class="footer-logo-box">
+                <span style="font-weight: 800; color: #fff; font-size: 18px;"><i class="fa-solid fa-graduation-cap" style="color:#10b981;"></i> Cəlilabad DPTM</span>
             </div>
-
-            <div class="rule-card">
-                <h3>2.Qəbul prosesi</h3>
-                <p>Qəbul prosesi ümumi və ya tam orta təhsil  bazasını bitirən şəxslər üçün açıqdır.</p>
-                <p>Qeydiyyatdan keçmiş müraciətçilərin elektron ərizələrindəki məlumatların doğruluğu yoxlanıldıqdan sonra iştirakçının ixtisaslar üzrə seçimi sistem tərəfindən təsdiqlənir.</p>
-                <p>Qəbul ilk və texniki peşə təhsili səviyyələri üzrə ərizəçinin attestatında göstərilən müvafiq fənlər üzrə qiymətlərinin orta balı əsasında, yüksək texniki peşə təhsili səviyyəsi üzrə isə buraxılış imtahanlarının nəticəsi əsasında həyata keçirilir.</p>
-                <p> Tələbə qəbulu prosesində iştirak edən hər bir şəxsə maksimum 5 ixtisas üzrə seçim etmək imkanı yaradılır.</p>  
-           </div>
-
-           <div class="rule-card">
-                <h3>3.Müraciət</h3>
-                <p>Müraciət edən şəxslərin nəticələri barədə məlumatın “şəxsi kabinetim” bölümündə yerləşdirilməsi, həmçinin SMS vasitəsilə də təqdim edilməsi nəzərdə tutulur. Müsabiqədən uğurla keçən namizədlər növbəti mərhələdə qəbul olduqları müəssisəyə sənədlərinin əslinin təqdim edilməsi üçün dəvət olunacaqlar.</p>
-           </div>
-
-           <div class="rule-card">
-                 <h3>4.Elektron qeydiyyatdan</h3>
-                 <ul>
-                    <li>Şəxsiyyəti təsdiq edən sənəd (Azərbaycan Respublikasının vətəndaşları şəxsiyyət vəsiqələrini, əcnəbilər müvəqqəti və ya daimi yaşayış icazə vəsiqələrini, Azərbaycan Respublikasında daimi yaşayan vətəndaşlığı olmayan şəxslər şəxsiyyət vəsiqələrini, qaçqın statusu almış şəxslər və onların ailə üzvləri isə qaçqın vəsiqələrini, onlara verilmiş yol sənədini, beynəlxalq müqavilələrdə nəzərdə tutulmuş hallarda digər sənədləri və ya icazə vəsiqələrini);</li>
-                    <li>Təhsil haqqında sənəd (attestat);</li>
-                    <li>Əlilliyi olan şəxslər, eləcə də valideynlərini itirmiş və valideyn himayəsindən məhrum olmuş uşaqlar müvafiq olaraq əlilliyini təsdiq edən sənəd, valideynlərini itirməsini və valideyn himayəsindən məhrum olmasını təsdiq edən sənəd.</li>
-                 </ul>
-           </div>
-        </div>
-    </section>
-
-    </section>
-
-    <section id="elaqə" class="section">
-        <div class="container">
-           <h2 class="section__title">Əlaqə</h2>
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <p><strong>Telefon:</strong><u>####################</u></p>
-                    <p><strong>Email:</strong><u>#####################</u></p>
-                    <p><strong>Whatsapp:</strong><u>####################</u></p>
-                    <p><strong>Təhsil Mərkəzi:</strong><u>Cəlilabad Dövlət Peşə Təhsil Mərkəzi</u></p>
-                    <p><strong>Adres:</strong><u>Göytəpə şəh Oqtay Eynullayev küç 2, 1514</u></p>
-                </div>
+            <p class="footer-text">Gələcəyin peşəkarlarını yüksək standartlarla hazırlayan rəsmi təhsil platforması.</p>
+            <div class="footer-social-links">
+                <a href="https://www.facebook.com/CDPTM" target="_blank" title="Facebook səhifəmiz"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/" target="_blank" title="Instagram profilimiz"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/" target="_blank" title="YouTube kanalımız"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
-    </section>
 
-    <footer class="footer">
-        <div class="container">
-             <p>&COPY;2026 Cəlilabad Dövlət Peşə Təhsil Mərkəzi. Bütün hüquqlar qorunur!</p>
-             <p>Cəlilabad, Azərbaycan</p>
+        <div class="footer-col">
+            <h4 class="footer-heading">Faydalı Keçidlər</h4>
+            <ul class="footer-menu">
+                <li><a href="index.html"><i class="fas fa-angle-right"></i> Ana Səhifə</a></li>
+                <li><a href="faq.html"><i class="fas fa-angle-right"></i> FAQ</a></li>
+                <li><a href="contact.html"><i class="fas fa-angle-right"></i> Bizimlə Əlaqə</a></li>
+                <li><a href="login.html"><i class="fas fa-angle-right"></i> Platformaya Giriş</a></li>
+            </ul>
         </div>
-    </footer>
 
-        <script src="script.js"></script>
+        <div class="footer-col">
+            <h4 class="footer-heading">Əlaqə Məlumatları</h4>
+            <ul class="footer-contact-list">
+                <li><i class="fas fa-map-marker-alt"></i> Göytəpə şəh Oqtay Eynullayev küç 2, 1514</li>
+                <li><i class="fas fa-phone-alt"></i> <a href="tel:0515530103">051 553 01 03</a></li>
+                <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/994504125795" target="_blank">WhatsApp</a></li>
+                <li><i class="fas fa-envelope"></i> <a href="mailto:calilabad@vet.edu.az">calilabad@vet.edu.az</a></li>
+            </ul>
+        </div>
+    </div>
+
+     <div class="footer-copyright">
+         <div class="container">
+            <p>&copy; 2026 Cəlilabad Dövlət Peşə Təhsil Mərkəzi. Bütün hüquqlar qorunur.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

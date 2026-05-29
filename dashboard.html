@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDPTM - Şəxsi Kabinet</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dash-body">
+
+    <div class="dash-container">
+        <aside class="sidebar">
+            <div class="sidebar__profile">
+                <div class="avatar-box">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+                <h3 id="userFullName">Yüklənir...</h3>
+                <span id="userRoleBadge" class="role-badge">Rol</span>
+                <p id="userID">ID: CDP-XXXX</p>
+            </div>
+
+            <nav class="sidebar__nav">
+                <a href="#" class="nav-item active"><i class="fa-solid fa-house"></i> Ana Panel</a>
+
+                <div id="menuDeputy" class="role-menu-group" style="display: none;">
+                    <span class="menu-title">Müavin Səlahiyyətləri</span>
+                    <a href="#" class="nav-item"><i class="fa-solid fa-user-plus"></i> Yeni Qeydiyyat (ID Yarat)</a>
+                    <a href="#" class="nav-item"><i class="fa-solid fa-users-gear"></i> İstifadəçiləri İdarə Et</a>
+                    <a href="#" class="nav-item"><i class="fa-solid fa-file-signature"></i> Qrupları Təyin Et</a>
+                </div>
+
+                <div id="menuTeacher" class="role-menu-group" style="display: none;">
+                    <span class="menu-title">Müəllim Paneli</span>
+                    <a href="#" class="nav-item"><i class="fa-solid fa-graduation-cap"></i> Mənim Qruplarım</a>
+                    <a href="#" class="nav-item"><i class="fa-solid fa-book-open"></i> Elektron Jurnal (Qiymətlər)</a>
+                    <a href="#" class="nav-item"><i class="fa-solid fa-clipboard-list"></i> Tapşırıq Göndər</a>
+                </div>
+
+                <div id="menuStudent" class="role-menu-group" style="display: none;">
+                    <span class="menu-title">Tələbə Platforması</span>
+                    <a href="#" class="nav-item"><i class="fa-solid fa-star"></i> Qiymətlərim & Davamiyyət</a>
+                    <a href="#" class="nav-item"><i class="fa-solid fa-calendar-days"></i> Dərs Cədvəli</a>
+                    <a href="#" class="nav-item"><i class="fa-solid fa-pen-to-square"></i> Tapşırıqlarım</a>
+                </div>
+
+                <a href="index.html" class="nav-item logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Sistemdən Çıx</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="content-header">
+                <h2>Xoş Gəldiniz, <span id="welcomeName">İstifadəçi</span>!</h2>
+                <div class="system-date"><i class="fa-regular fa-calendar"></i> Sistemin Vaxtı: 2026</div>
+            </header>
+
+            <div class="content-body" id="dashboardContent">
+                <p>Platformaya uğurla giriş etdiniz. Səlahiyyətləriniz daxilində sol menyudan keçid edə bilərsiniz.</p>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const currentUser = {
+            name: "Leyla Əliyeva",
+            id: "CDP-2026-089",
+            role: "Deputy" 
+        };
+
+        // Elementləri doldururuq
+        document.getElementById("userFullName").innerText = currentUser.name;
+        document.getElementById("welcomeName").innerText = currentUser.name;
+        document.getElementById("userID").innerText = "ID: " + currentUser.id;
+        
+        const badge = document.getElementById("userRoleBadge");
+        badge.innerText = currentUser.role === "Deputy" ? "Müavin" : currentUser.role === "Teacher" ? "Müəllim" : "Tələbə";
+        badge.classList.add(currentUser.role.toLowerCase());
+
+        if(currentUser.role === "Deputy") {
+            document.getElementById("menuDeputy").style.display = "block";
+        } else if(currentUser.role === "Teacher") {
+            document.getElementById("menuTeacher").style.display = "block";
+        } else if(currentUser.role === "Student") {
+            document.getElementById("menuStudent").style.display = "block";
+        }
+    </script>
+</body>
+</html>

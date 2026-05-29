@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qeydiyyat - Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+
+    <div class="auth-container">
+        <div class="auth-box">
+            <div class="auth-box__icon">
+                <i class="fa-solid fa-book-open-reader"></i>
+            </div>
+            
+            <h2 class="auth-box__title">Portalda Qeydiyyat</h2>
+            <p class="auth-box__subtitle">Məlumatları düzgün daxil edərək hesabınızı yaradın</p>
+            
+            <div class="role-selector">
+                <button type="button" class="role-btn active" data-role="telebe">
+                    <i class="fa-solid fa-user-graduate"></i> Tələbə
+                </button>
+                <button type="button" class="role-btn" data-role="muallim">
+                    <i class="fa-solid fa-chalkboard-user"></i> Müəllim
+                </button>
+                <button type="button" class="role-btn" data-role="admin">
+                    <i class="fa-solid fa-user-shield"></i> Administrator
+                </button>
+            </div>
+            
+            <div id="statusMessage" class="status-message" style="display: none;"></div>
+
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="regUsername"><i class="fas fa-user"></i> İstifadəçi adı (Username)</label>
+                    <input type="text" id="regUsername" class="form-control" placeholder="istifadəçi_adı" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="regEmail"><i class="fas fa-envelope"></i> E-mail Ünvanı</label>
+                    <input type="email" id="regEmail" class="form-control" placeholder="nümunə@mail.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="regPassword"><i class="fas fa-lock"></i> Şifrə</label>
+                    <div style="position: relative; display: flex; align-items: center;">
+                        <input type="password" id="regPassword" class="form-control" placeholder="••••••••" style="padding-right: 45px;" required>
+                        <i class="fas fa-eye toggle-password" id="togglePasswordIcon" style="position: absolute; right: 15px; cursor: pointer; color: #94a3b8; font-size: 16px; z-index: 10;"></i>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="regId"><i class="fas fa-id-card-clip"></i> Təyin Olunacaq ID Nömrəsi</label>
+                    <input type="text" id="regId" class="form-control" placeholder="Məsələn: TEL-001" required autocomplete="off">
+                    <small id="idHelp" class="form-help">Vəzifənizə uyğun özəl ID-nizi daxil edin (TEL- prefiqsi ilə).</small>
+                </div>
+
+                <button type="submit" class="btn btn--primary btn--block">
+                    <span id="submitText">Tələbə Qeydiyyatını Tamamla</span> <i class="fas fa-check-circle"></i>
+                </button>
+            </form>
+
+            <div class="auth-box__footer">
+                <a href="login.html"><i class="fa-solid fa-arrow-right-to-bracket"></i> Artıq hesabınız var? Daxil olun</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="security_keys.js"></script>
+    
+</body>
+</html>
+</body>
+</html>

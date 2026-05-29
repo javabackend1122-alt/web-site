@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDPTM - Müəllim Portalı</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard_style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h2><i class="fa-solid fa-graduation-cap" style="color: #3b82f6;"></i> CDPTM <span class="badge--teacher" style="background: rgba(59, 130, 246, 0.15); color: #3b82f6; font-size: 11px; padding: 3px 10px; border-radius: 20px; font-weight: 700; text-transform: uppercase;">Müəllim</span></h2>
+        </div>
+        <div class="nav-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="panelSearch" placeholder="Tələbə, sinif və ya mövzu axtar...">
+        </div>
+        <div class="nav-profile">
+            <div class="user-info">
+                <div class="user-info__name" id="navTeacherName">Yüklənir...</div>
+                <div class="user-info__id" id="navTeacherId">ID: MUE-000</div>
+            </div>
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120" id="navTeacherAvatar" class="user-avatar" alt="Müəllim">
+            <button class="logout-btn" onclick="location.href='login.html'"><i class="fa-solid fa-arrow-right-from-bracket"></i> Çıxış</button>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        
+        <div class="welcome-card" style="background: linear-gradient(135deg, #1e3a8a, #111827);">
+            <h1 id="welcomeTitle">Xoş gəldiniz!</h1>
+            <p>Mənim siniflərim modulundan tələbə davamiyyətini yoxlaya, rəqəmsal jurnala qiymətlər daxil edə və tədris materiallarını yeniləyə bilərsiniz.</p>
+        </div>
+
+        <div class="dashboard-grid">
+            
+            <aside class="profile-sidebar" style="position: relative;">
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: linear-gradient(to right, #3b82f6, #1d4ed8); border-radius: 20px 20px 0 0;"></div>
+                
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120" id="teacherAvatar" class="profile-sidebar__img" alt="Müəllim">
+                 <h3 class="profile-sidebar__name" id="sidebarTeacherName">Yüklənir...</h3>
+                 <p class="profile-sidebar__role" style="color: #3b82f6;">Baş Müəllim / Kafedra</p>
+                
+                <div class="profile-bio">
+                    CDPTM təhsil şəbəkəsinin rəsmi professor-müəllim heyətinin üzvü. Tədris olunan əsas elmi istiqamətlər və mühazirə qrupları aşağıda qeyd olunmuşdur.
+                </div>
+
+                <div class="profile-details">
+                    <div class="profile-detail-item"><span>Əsas Kafedra</span><strong id="teacherDept">Yüklənir...</strong></div>
+                    <div class="profile-detail-item"><span>Aktiv Qruplar</span><strong id="teacherGroups" style="color: #3b82f6;">Yüklənir...</strong></div>
+                    <div class="profile-detail-item"><span>Korporativ E-mail</span><strong id="teacherEmail">Yüklənir...</strong></div>
+                </div>
+            </aside>
+
+            <main class="main-panel">
+                <div class="modules-grid">
+                    
+                    <div class="module-card">
+                        <div class="module-card__icon" style="color: #3b82f6; background: rgba(59, 130, 246, 0.08);"><i class="fa-solid fa-users-rectangle"></i></div>
+                        <h3>Mənim Siniflərim</h3>
+                        <p>Tədris etdiyiniz qrupların tam siyahısı və daxili tələbə profilləri.</p>
+                    </div>
+                    
+                    <div class="module-card">
+                        <div class="module-card__icon" style="color: #10b981; background: rgba(16, 185, 129, 0.08);"><i class="fa-solid fa-pen-to-square"></i></div>
+                        <h3>Elektron Jurnal</h3>
+                        <p>Tələbələrin günlük qiymətləndirilməsi və rəsmi imtahan balları.</p>
+                    </div>
+                    
+                    <div class="module-card active-trigger" id="teacherStudentsTrigger" style="border: 1px solid rgba(59, 130, 246, 0.25);">
+                        <div class="module-card__icon" style="background: rgba(59, 130, 246, 0.1); color: #3b82f6;"><i class="fa-solid fa-address-book"></i></div>
+                        <h3>Tələbə Siyahısı</h3>
+                        <p>Mərkəzi sistemdə olan aktiv tələbələrin idarəetmə və monitorinq paneli.</p>
+                    </div>
+                    
+                </div>
+
+                <section class="live-panel-section" id="teacherStudentsSection" style="border-color: rgba(59, 130, 246, 0.15); display: none; margin-top: 30px;">
+                    
+                    <div class="panel-block">
+                        <h3 style="color: #3b82f6; font-size: 15px; margin-bottom: 15px;"><i class="fa-solid fa-graduation-cap"></i> Monitorinqdə Olan Tələbələr</h3>
+                        <div id="teacherStudentContainer"></div>
+                    </div>
+                    
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="muellim_dashboard.js"></script>
+</body>
+</html>

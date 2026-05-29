@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cəlilabad Dövlət Peşə Tədris Mərkəzi - Yeməkxana</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="yemekxana_style.css">
+</head>
+<body>
+
+    <nav class="premium-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="canteen-logo-zone">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+                <div class="brand-info">
+                    <h2>CDPTM Portal</h2>
+                    <span>Yeməkxana Sistemi</span>
+                </div>
+            </div>
+
+            <div class="nav-menu-center-hub">
+               <div class="hub-badge">
+                 <i class="fa-solid fa-fire-flame-curved fa-pulse"></i> BU GÜN MENYUDA:
+               </div>
+            <div class="hub-animation-wrapper">
+            <div class="hub-dishes-track">
+                <span class="hub-dish-item"><i class="fa-solid fa-bowl-hot"></i> Mərci Şorbası</span>
+                <span class="hub-dish-item"><i class="fa-solid fa-plate-wheat"></i> Ət Qulyajı & Düyü</span>
+                <span class="hub-dish-item"><i class="fa-solid fa-cookie-bite"></i> Qozlu Keks</span>
+                <span class="hub-dish-item"><i class="fa-solid fa-cheese"></i> Dovğa</span>
+           </div>
+       </div>
+    </div>
+
+            <div class="nav-right">
+                <div class="nav-search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="panelSearch" placeholder="Menyuda axtar...">
+                </div>
+                <button class="back-btn" onclick="window.history.back()"><i class="fa-solid fa-arrow-left"></i></button>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="menu-section" style="margin-top: 140px;">
+        
+        <div class="menu-header">
+            <h2>Cəlilabad DPTM Yeməkxanası</h2>
+            <p class="menu-subtitle">Günün ləzzətli, təzə təamları və şirniyyat menyusu</p>
+        </div>
+
+        <div class="menu-category-block">
+            <h3 class="menu-category-title"><i class="fa-solid fa-bowl-hot"></i> Sulu Yeməklər</h3>
+            <div class="menu-grid" id="soupsContainer">
+                
+                <div class="menu-card">
+                    <div class="menu-card__image-wrapper">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthfvnext.bing.com%2Fth%2Fid%2FOIP.D54QMiO4OZv6odB0Q5VImwHaE7%3Fr%3D0%26cb%3Dthfvnextfalcon%26pid%3DApi&f=1&ipt=705da216fef94dcca7a642d9097f28646b2b950bcb72fbb86368fd8538a7ae4a&ipo=images" alt="Yemək" class="menu-card__img">
+                        <span class="menu-card__badge">Şefin Seçimi</span>
+                    </div>
+                    <div class="menu-card__info">
+                        <div class="menu-card__header">
+                            <h4 class="menu-card__title">Mərci Şorbası</h4>
+                            <span class="menu-card__price">1.50 AZN</span>
+                        </div>
+                        <p class="menu-card__ingredients">Qırmızı mərcimək zəngin kimyəvi tərkibə malikdir; onun 100 qramında təxminən 25-28 qram bitki mənşəli zülal, 10-11 qram pəhriz lifləri (sellüloza), həmçinin bədən üçün vacib olan dəmir, maqnezium, kalium finalları və xüsusilə B9 vitamini (fol turşusu) yer alır.</p>
+                        <div class="menu-card__footer">
+                            <div class="menu-card__stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="menu-card__popularity-score"><i class="fas fa-fire"></i> 95%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <div class="menu-card__image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?w=500" alt="Yemək" class="menu-card__img">
+                    </div>
+                    <div class="menu-card__info">
+                        <div class="menu-card__header">
+                            <h4 class="menu-card__title">Toyuq Şorbası</h4>
+                            <span class="menu-card__price">2.0 AZN</span>
+                        </div>
+                        <p class="menu-card__ingredients">Toyuq şorbası, tərkibindəki zəngin zülal, vitamin və minerallar sayəsində xüsusilə soyuqdəymə zamanı bədəni bərpa edən, immuniteti gücləndirən və hər yaş qrupu üçün həm faydalı, həm də çox sevilən şəfalı bir qidadır.</p>
+                        <div class="menu-card__footer">
+                            <div class="menu-card__stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                            <span class="menu-card__popularity-score"><i class="fas fa-fire"></i> 88%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <div class="menu-card__image-wrapper">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.YGdKrfaBEk_qXpiP4IiVPQHaFF%3Fpid%3DApi&f=1&ipt=20d71e01f797d34198cb4b3430684b2a98d116547aeac2a762c52c5cd717a0df&ipo=images" alt="Yemək" class="menu-card__img">
+                    </div>
+                    <div class="menu-card__info">
+                        <div class="menu-card__header">
+                            <h4 class="menu-card__title">Göbələk Şorbası</h4>
+                            <span class="menu-card__price">3.0 AZN</span>
+                        </div>
+                        <p class="menu-card__ingredients">Göbələk şorbası, tərkibindəki B qrupu vitaminləri və antioksidantlar sayəsində immuniteti gücləndirən, həmçinin unikal aroması və kremsi toxuması ilə süfrələri bəzəyən olduqca doyumcul bir qidadır.</p>
+                        <div class="menu-card__footer">
+                            <div class="menu-card__stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="menu-card__popularity-score"><i class="fas fa-fire"></i> 92%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <div class="menu-card__image-wrapper">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthfvnext.bing.com%2Fth%2Fid%2FOIP.Vr_PBznwCjg6iWyQPfSKcAHaHa%3Fr%3D0%26cb%3Dthfvnextfalcon%26pid%3DApi&f=1&ipt=53340fa152ab8f787683bc11912c7b609c302b2c0925353f32db91f7b2df66b1&ipo=images" alt="Yemək" class="menu-card__img">
+                    </div>
+                    <div class="menu-card__info">
+                        <div class="menu-card__header">
+                            <h4 class="menu-card__title">Dovğa</h4>
+                            <span class="menu-card__price">0.50 AZN</span>
+                        </div>
+                        <p class="menu-card__ingredients">Dovğa: Qatıq, ruzi (düyü və ya noxut) və bol təzə göyərtinin harmoniyasından yaranan, yayda soyuq, qışda isə isti içilən, həzm sisteminə xeyirli olan şəfalı bir Azərbaycan milli şorbasıdır.</p>
+                        <div class="menu-card__footer">
+                            <div class="menu-card__stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="menu-card__popularity-score"><i class="fas fa-fire"></i> 95%</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="menu-card">
+                    <div class="menu-card__image-wrapper">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.g2_K27yDBNZUQPzaiCS2VwHaE8%3Fpid%3DApi&f=1&ipt=ce8d668b7b015b8f07493baed6233c3bab6f15bcc1a383a913bb68c3524bc6d1&ipo=images" alt="Yemək" class="menu-card__img">
+                    </div>
+                    <div class="menu-card__info">
+                        <div class="menu-card__header">
+                            <h4 class="menu-card__title">Küftə-bozbaş</h4>
+                            <span class="menu-card__price">4 AZN</span>
+                        </div>
+                        <p class="menu-card__ingredients">Küftə-bozbaş: Çəkilmiş mal və ya qoyun ətindən hazırlanan iri küftələrin (bəzən içində alça qurusu ilə), kartof və noxudla birlikdə zəngin bulyonda bişirildiyi, olduqca doyumcul və ənənəvi bir Azərbaycan milli yeməyidir.</p>
+                        <div class="menu-card__footer">
+                            <div class="menu-card__stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="menu-card__popularity-score"><i class="fas fa-fire"></i> 89%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-card">
+                    <div class="menu-card__image-wrapper">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.tpP3x9F9HpoAuUp9fNhDnQHaHa%3Fpid%3DApi&f=1&ipt=322194b080ea839bf3543f2f905082d5c35fcd003e6c765271420cbbbb3ec467&ipo=images" alt="Yemək" class="menu-card__img">
+                    </div>
+                    <div class="menu-card__info">
+                        <div class="menu-card__header">
+                            <h4 class="menu-card__title">Borş</h4>
+                            <span class="menu-card__price">2.50 AZN</span>
+                        </div>
+                        <p class="menu-card__ingredients">Borş: Kələm, çuğundur, yerkökü və ətin birlikdə bişirilməsi ilə hazırlanan, özünəməxsus qırmızı rəngi və üzərinə xama əlavə edilərək yeyilən, vitaminlərlə zəngin məşhur bir şorbadır.</p>
+                        <div class="menu-card__footer">
+                            <div class="menu-card__stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="menu-card__popularity-score"><i class="fas fa-fire"></i> 70%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-category-block">
+            <h3 class="menu-category-title"><i class="fa-solid fa-bowl-hot"></i> Quru Yeməklər</h3>
+            <div class="menu-grid">
+                
+                <div class="menu-card">
+                    <div class="menu-card__image-wrapper">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.edzkWRW8varMsRFrRWlZbQHaHa%3Fpid%3DApi&f=1&ipt=4617074e51914ed7cb0e581ec35039105003ffb6689122add8db81ca81b35322&ipo=images" alt="Yemək" class="menu-card__img">
+                        <span class="menu-card__badge">Şefin Seçimi</span>
+                    </div>
+                    <div class="menu-card__info">
+                        <div class="menu-card__header">
+                            <h4 class="menu-card__title">Spageti</h4>
+                            <span class="menu-card__price">1.50 AZN</span>
+                        </div>
+                        <p class="menu-card__ingredients">Spageti: İtalyan mətbəxinin vizit kartı olan bu uzun makaron növü, xüsusilə müxtəlif souslar və qiymə ilə birlikdə uşaqdan böyüyə hər kəsin sevdiyi sürətli və doyumcul bir qarnirdir.</p>
+                        <div class="menu-card__footer">
+                            <div class="menu-card__stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="menu-card__popularity-score"><i class="fas fa-fire"></i> 85%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <div class="menu-card__image-wrapper">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%2Fid%2FOIP.LodDAPXALRPjaY5jcbycpAHaE8%3Fr%3D0%26pid%3DApi&f=1&ipt=42b8f41794fb39c6dd0af6f7dfb6e469192fd7c7ecf8f9d0c26c842b88c56fa5&ipo=images" alt="Yemək" class="menu-card__img">
+                    </div>
+                    <div class="menu-card__info">
+                        <div class="menu-card__header">
+                            <h4 class="menu-card__title">Kartof əzməsi (Püre)</h4>
+                            <span class="menu-card__price">2 AZN</span>
+                        </div>
+                        <p class="menu-card__ingredients">Kartof əzməsi (Püre): Sifarişlərin və ev yeməklərinin vazkeçilməzi olan bu zərif qarnir, südlə və kərə yağı ilə qarışdırılarak ət yeməklərinin yanına mükəmməl bir yumşaqlıq qatır.</p>
+                        <div class="menu-card__footer">
+                            <div class="menu-card__stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                            <span class="menu-card__popularity-score"><i class="fas fa-fire"></i> 70%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <div class="menu-card__image-wrapper">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.HvlHJbSqnsp0JFrVt8m_SwHaFj%3Fr%3D0%26pid%3DApi&f=1&ipt=d7cc59aaec8f99ccab3e85a7dcb31e60e9d7f6bae653266eccce5cfae0c9d4ec&ipo=images" alt="Yemək" class="menu-card__img">
+                    </div>
+                    <div class="menu-card__info">
+                        <div class="menu-card__header">
+                            <h4 class="menu-card__title">Toyuq qulyajı ilə</h4>
+                            <span class="menu-card__price">2.50 AZN</span>
+                        </div>
+                        <p class="menu-card__ingredients">Toyuq qulyajı ilə: Xırda doğranmış toyuq ətinin soğan, bibər və tomat sousu ilə birlikdə vam odda bişirilməsindən hazırlanan, spageti və ya düyü ilə çox yaraşan yüngül bir əsas yeməkdir.</p>
+                        <div class="menu-card__footer">
+                            <div class="menu-card__stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="menu-card__popularity-score"><i class="fas fa-fire"></i> 92%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <div class="menu-card__image-wrapper">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%2Fid%2FOIP.ujAmQVAx24jPH5niHAj0MAHaEr%3Fr%3D0%26pid%3DApi&f=1&ipt=ca9abf416c4ddf03e8c598762ceeae6fec92328d108478975ab0e65d6140718b&ipo=images" alt="Yemək" class="menu-card__img">
+                    </div>
+                    <div class="menu-card__info">
+                        <div class="menu-card__header">
+                            <h4 class="menu-card__title">Ət qulyajı ilə</h4>
+                            <span class="menu-card__price">3 AZN</span>
+                        </div>
+                        <p class="menu-card__ingredients">Ət qulyajı ilə: Mal və ya qoyun ətinin dadlı sousda uzun müddət bişirilərək ağızda dağılacaq hala gətirildiyi, dənəvər qarnirlərlə mükəmməl uyğunlaşan zəngin bir şərqi Avropa təamıdır.</p>
+                        <div class="menu-card__footer">
+                            <div class="menu-card__stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="menu-card__popularity-score"><i class="fas fa-fire"></i> 92%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <div class="menu-card__image-wrapper">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.wZK9kNty_OcXIwyIB1cyOQHaEK%3Fpid%3DApi&f=1&ipt=48b4fb17e8516442e6e96df8a80643dad1fb2a05d712d226944525f80f0422e7&ipo=images" alt="Yemək" class="menu-card__img">
+                    </div>
+                    <div class="menu-card__info">
+                        <div class="menu-card__header">
+                            <h4 class="menu-card__title">Toyuq kotleti ilə</h4>
+                            <span class="menu-card__price">2.50 AZN</span>
+                        </div>
+                        <p class="menu-card__ingredients">Toyuq kotleti ilə: Çəkilmiş toyuq ətinin müxtəlif ədviyyatlarla yoğrulub qızardılması ilə hazırlanan, həm uşaqların sevdiyi, həm də pəhriz saxlayanlar üçün uyğun olan yüngül bir yeməkdir.</p>
+                        <div class="menu-card__footer">
+                            <div class="menu-card__stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="menu-card__popularity-score"><i class="fas fa-fire"></i> 81%</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="menu-card">
+                    <div class="menu-card__image-wrapper">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.Me7QldW_HPtdQQ_HFJXjmgHaEN%3Fpid%3DApi&f=1&ipt=43713a3516837e81907e7e0762cd78034e75768c650c1793a216459a0c40efd1&ipo=images" alt="Yemək" class="menu-card__img">
+                    </div>
+                    <div class="menu-card__info">
+                        <div class="menu-card__header">
+                            <h4 class="menu-card__title">Ət kotleti ilə</h4>
+                            <span class="menu-card__price">3 AZN</span>
+                        </div>
+                        <p class="menu-card__ingredients">Ət kotleti ilə: Çəkilmiş mal və ya qoyun ətindən hazırlanan, içi şirəli, çölü isə qızarmış bu klassik təam, demək olar ki, hər növ qarnirin dadını tamamlayan ən populyar əsas yeməklərdən biridir.</p>
+                        <div class="menu-card__footer">
+                            <div class="menu-card__stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="menu-card__popularity-score"><i class="fas fa-fire"></i> 81%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <div class="menu-card__image-wrapper">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.QDWD8FixS4-eDdQe-JFjjgHaEK%3Fr%3D0%26pid%3DApi&f=1&ipt=bebcc5312a0eae3e5d21ca338b1f50379a757bc713c82f56ef261fb4bae2cdc4&ipo=images" alt="Yemək" class="menu-card__img">
+                    </div>
+                    <div class="menu-card__info">
+                        <div class="menu-card__header">
+                            <h4 class="menu-card__title">Toyuq qızartması</h4>
+                            <span class="menu-card__price">2.50 AZN</span>
+                        </div>
+                        <p class="menu-card__ingredients">Toyuq qızartması: Toyuq ətinin sobada və ya tavada qızılı rəng alana qədər bişirilməsi ilə hazırlanan, həm gündəlik süfrələrə, həm də bayramlara yaraşan xırtıldayan və ləzzətli bir seçimdir.</p>
+                        <div class="menu-card__footer">
+                            <div class="menu-card__stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="menu-card__popularity-score"><i class="fas fa-fire"></i> 81%</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="menu-card">
+                    <div class="menu-card__image-wrapper">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.aloJQlNNMf1ZLM0xzKRxlwHaE8%3Fpid%3DApi&f=1&ipt=b3d45d5050ec18e9b37c2940e6d32eb24aaf95cbe0dd4c9e030a34c2f63947c9&ipo=images" alt="Yemək" class="menu-card__img">
+                    </div>
+                    <div class="menu-card__info">
+                        <div class="menu-card__header">
+                            <h4 class="menu-card__title">Makaron</h4>
+                            <span class="menu-card__price">1.50 AZN</span>
+                        </div>
+                        <p class="menu-card__ingredients">Makaron: Hazırlanması olduqca asan və sürətli olan bu karbohidrat mənbəyi, tələbə süfrələrindən tutmuş restoran menyularına qədər hər yerdə fərqli souslarla təqdim edilən universal qarnirdir.</p>
+                        <div class="menu-card__footer">
+                            <div class="menu-card__stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="menu-card__popularity-score"><i class="fas fa-fire"></i> 81%</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="menu-card">
+                    <div class="menu-card__image-wrapper">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.45ghGTKYmQ7WgitcfOYH-gHaEo%3Fpid%3DApi&f=1&ipt=fb596ecc782372bd6b467648a3033fcc31e520e30fe2b89461dd2f2db098d3dd&ipo=images" alt="Yemək" class="menu-card__img">
+                    </div>
+                    <div class="menu-card__info">
+                        <div class="menu-card__header">
+                            <h4 class="menu-card__title">Qarabaşaq (Qreçka):</h4>
+                            <span class="menu-card__price">1.50 AZN</span>
+                        </div>
+                        <p class="menu-card__ingredients">Qarabaşaq (Qreçka): Tərkibindəki yüksək lif və dəmir sayəsində olduqca faydalı olan bu pəhriz qidası, xüsusilə çəkiyə nəzarət edənlər və sağlam bəslənənlər üçün əla bir qarnir seçimidir.</p>
+                        <div class="menu-card__footer">
+                            <div class="menu-card__stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="menu-card__popularity-score"><i class="fas fa-fire"></i> 81%</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="menu-card">
+                    <div class="menu-card__image-wrapper">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthfvnext.bing.com%2Fth%2Fid%2FOIP.ydOTtHp8P7p5zSD_nGOL6AHaGf%3Fcb%3Dthfvnextfalcon%26pid%3DApi&f=1&ipt=8944617611bdf853dadee519a35c8dbd4e75a4e6b11abbea1b2efb66a965face&ipo=images" alt="Yemək" class="menu-card__img">
+                    </div>
+                    <div class="menu-card__info">
+                        <div class="menu-card__header">
+                            <h4 class="menu-card__title">Düyü</h4>
+                            <span class="menu-card__price">1.50 AZN</span>
+                        </div>
+                        <p class="menu-card__ingredients">Düyü: Şərq və Azərbaycan mətbəxinin şahı sayılan dənəvər düyü (aş), həm təkbaşına, həm də bütün növ sulu və quru ət yeməklərinin yanında əvəzolunmaz bir baza rolunu oynayır.</p>
+                        <div class="menu-card__footer">
+                            <div class="menu-card__stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="menu-card__popularity-score"><i class="fas fa-fire"></i> 81%</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="menu-card">
+                    <div class="menu-card__image-wrapper">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthfvnext.bing.com%2Fth%2Fid%2FOIP.5GxJMvphgSpQH9sRvxj0fAHaHa%3Fr%3D0%26cb%3Dthfvnextfalcon%26pid%3DApi&f=1&ipt=ade01655683718dc5ee0215833db3cfe5f138dba82c5707ce43f10b8025f339a&ipo=images" alt="Yemək" class="menu-card__img">
+                    </div>
+                    <div class="menu-card__info">
+                        <div class="menu-card__header">
+                            <h4 class="menu-card__title">Mal əti qovurma</h4>
+                            <span class="menu-card__price">4.50 AZN</span>
+                        </div>
+                        <p class="menu-card__ingredients">Mal əti qovurma: Mal ətinin öz suyunda və kərə yağında soğanla birlikdə tam bişənə qədər qovrulması ilə hazırlanan, zəngin zülal mənbəyi olan doyumcul bir milli xörəkdir.</p>
+                        <div class="menu-card__footer">
+                            <div class="menu-card__stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="menu-card__popularity-score"><i class="fas fa-fire"></i> 81%</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="menu-card">
+                    <div class="menu-card__image-wrapper">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthf.bing.com%2Fth%2Fid%2FOIP.FFdp8CuqhzfiLEIXVQBfOgHaEK%3Fr%3D0%26cb%3Dthfc1falcon%26pid%3DApi&f=1&ipt=aaa56c7d6a57c8ed8ebcaf333c73290d964c325d2354823de0e300ddc8273492&ipo=images" alt="Yemək" class="menu-card__img">
+                    </div>
+                    <div class="menu-card__info">
+                        <div class="menu-card__header">
+                            <h4 class="menu-card__title">Toyuq qovurma</h4>
+                            <span class="menu-card__price">3.50 AZN</span>
+                        </div>
+                        <p class="menu-card__ingredients">Toyuq qovurma: Toyuq tikələrinin bol soğan və istəyə görə kartofla birlikdə tavada qızardılması ilə ərsəyə gələn, tez başa gələn və olduqca ləzzətli bir əsas yeməkdir.</p>
+                        <div class="menu-card__footer">
+                            <div class="menu-card__stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="menu-card__popularity-score"><i class="fas fa-fire"></i> 81%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-category-block" style="margin-top: 50px; margin-bottom: 50px;">
+            <h3 class="menu-category-title"><i class="fa-solid fa-ice-cream"></i> Şirniyyatlar</h3>
+            <div class="menu-grid" id="dessertsContainer">
+                
+                <div class="menu-card">
+                    <div class="menu-card__image-wrapper">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.explicit.bing.net%2Fth%2Fid%2FOIP.hmGQBqRW7GuGB8qbrFjO6wHaFk%3Fpid%3DApi&f=1&ipt=741a821df3c0bc4155f20a79b9eed05b9813388b76b39d5290e78844ef3b34c7&ipo=images" alt="Yemək" class="menu-card__img">
+                        <span class="menu-card__badge">Populyar</span>
+                    </div>
+                    <div class="menu-card__info">
+                        <div class="menu-card__header">
+                            <h4 class="menu-card__title">Keks</h4>
+                            <span class="menu-card__price">1.40 AZN</span>
+                        </div>
+                        <p class="menu-card__ingredients">Keks, un, şəkər, yumurta və yağın mükəmməl harmoniyası ilə hazırlanan, tərkibinə əlavə edilən qoz, şokolad və ya meyvə quruları ilə hər çay süfrəsinin imtinaedilməz və ən qısa zamanda sevilən şirniyyatlarından biridir.</p>
+                        <div class="menu-card__footer">
+                            <div class="menu-card__stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="menu-card__popularity-score"><i class="fas fa-fire"></i> 99%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <div class="menu-card__image-wrapper">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthfvnext.bing.com%2Fth%2Fid%2FOIP.lt4nhiV8o1rbFSmOdRmfWQHaEy%3Fcb%3Dthfvnextfalcon%26pid%3DApi&f=1&ipt=26f8477fdbf525b4ad13259039611d318decb2c45e16ad3114094d7b5ba8c289&ipo=images" alt="Yemək" class="menu-card__img">
+                    </div>
+                    <div class="menu-card__info">
+                        <div class="menu-card__header">
+                            <h4 class="menu-card__title">Hündür Tort</h4>
+                            <span class="menu-card__price">10 AZN</span>
+                        </div>
+                        <p class="menu-card__ingredients">Hündür tortlar (Tort wysoki), xüsusilə ad günləri, toy və nişan kimi xüsusi günlər üçün hazırlanan, həm çoxmərtəbəli, həm də tək mərtəbəli ama dik dizaynı ilə vizual olaraq heyranedici və olduqca dəbdəbəli görünən bayram şirniyyatlarıdır.</p>
+                        <div class="menu-card__footer">
+                            <div class="menu-card__stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                            <span class="menu-card__popularity-score"><i class="fas fa-fire"></i> 91%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <div class="menu-card__image-wrapper">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthf.bing.com%2Fth%2Fid%2FOIP.bO3arztmXxKH3QiNzQ0C7AHaEK%3Fcb%3Dthfc1falcon%26pid%3DApi&f=1&ipt=77a09851a67605540b606fae66f4f81ce97c42ca253c6ea100f60798002cf4f7&ipo=images" alt="Yemək" class="menu-card__img">
+                    </div>
+                    <div class="menu-card__info">
+                        <div class="menu-card__header">
+                            <h4 class="menu-card__title">Qara Tutlu Piroq</h4>
+                            <span class="menu-card__price">3.50 AZN</span>
+                        </div>
+                        <p class="menu-card__ingredients">Qara tutlu piroq, antioksidantlarla zəngin olan qara tutun qanı təmizləməyə və immuniteti gücləndirməyə kömək edən şəfalı xüsusiyyətlərini şirniyyat masanıza daşıyan, həm turşməzə dadı, həm də faydaları ilə seçilən mükəmməl bir yay desertidir.</p>
+                        <div class="menu-card__footer">
+                            <div class="menu-card__stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                            <span class="menu-card__popularity-score"><i class="fas fa-fire"></i> 91%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const canteenSearch = document.getElementById("panelSearch");
+            if (canteenSearch) {
+                canteenSearch.addEventListener("input", (e) => {
+                    const query = e.target.value.toLowerCase().trim();
+                    const menuCards = document.querySelectorAll(".menu-card");
+                    
+                    menuCards.forEach(card => {
+                        if (card.textContent.toLowerCase().includes(query)) {
+                            card.style.display = "flex";
+                            card.style.opacity = "1";
+                        } else {
+                            card.style.display = "none";
+                            card.style.opacity = "0";
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

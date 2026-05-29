@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cəlilabad DPTM - Rəqəmsal Kitabxana</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="kitabxana_style.css">
+</head>
+<body>
+
+    <div class="library-container">
+        
+        <header class="library-header">
+            <div class="lib-badge"><i class="fa-solid fa-graduation-cap"></i> CƏLİLABAD DPTM</div>
+            <h1>Rəqəmsal Kitabxana</h1>
+            <p>Peşə dərsliklərinin elektron bazası</p>
+            <div class="header-line"></div>
+        </header>
+        
+        <section class="featured-book-zone">
+           <div class="featured-badge"><i class="fa-solid fa-fire"></i> GÜNÜN ƏN ÇOX SEÇİLƏNİ</div>
+            <div class="featured-flex-box">
+                <div class="featured-cover">
+                    <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=400" alt="Günün Kitabı">
+                </div>
+                <div class="featured-details">
+                    <span class="feat-profession"><i class="fa-solid fa-code"></i> Rəqəmsal Peşələr</span>
+                    <h2>Proqramlaşdırmanın Əsasları və Alqoritmlər</h2>
+                    <p class="feat-author">Mütəxəssis E. Əliyev</p>
+                    <p class="feat-desc">Bu gün tələbələr tərəfindən rekord sayda (142 dəfə) yüklənən və oxunan, İT ixtisasının təməl alqoritmik strukturlarını izah edən rəsmi dərslik.</p>
+                    <div class="feat-action">
+                        <span class="feat-size"><i class="fa-regular fa-file-pdf"></i> PDF (6.8 MB)</span>
+                        <a href="Downloads/proqramlasdirmanin_esaslari" download class="feat-download-btn">
+                       <i class="fa-solid fa-download"></i> İndi Yüklə
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+        <section class="control-panel">
+            <div class="search-wrapper">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="librarySearch" placeholder="Kitab, müəllif və ya ixtisas axtarın...">
+            </div>
+            
+            <div class="filter-wrapper">
+                <button class="shelf-btn active" data-filter="all">Bütün Rəflər</button>
+                <button class="shelf-btn" data-filter="texniki">Texniki & Mexanika</button>
+                <button class="shelf-btn" data-filter="it">İT & Proqramlaşdırma</button>
+                <button class="shelf-btn" data-filter="xidmet">Xidmət & Qida</button>
+                <button class="shelf-btn" data-filter="dizayn">Dizayn & Tikinti</button>
+                <button class="shelf-btn" data-filter="bedii">Bədii Əsərlər & Romanlar</button>
+                <button class="shelf-btn" data-filter="diller">Xarici Dillər</button>
+            </div>
+        </section>
+
+        <main class="books-grid" id="booksGrid">
+            
+            <div class="modern-book-card" data-category="texniki">
+                <div class="card-image-zone">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.d--kocKr1ozm-RGJZxMihAHaEW%3Fpid%3DApi&f=1&ipt=70fb54eef4d14503ee0a2107ee2f165a20547f4cfdc969427a459bfdbfc21edb&ipo=images" alt="Kitab">
+                    <span class="card-tag">Mexanika</span>
+                </div>
+                <div class="card-content-zone">
+                    <span class="profession-code"><i class="fa-solid fa-wrench"></i> Avtomobil Mexaniki</span>
+                    <h3>Avtomobillərin Konstruksiyası</h3>
+                    <p class="author-name">Usta R. Kərimov</p>
+                    <p class="summary-text">Mühərriklərin daxili quruluşu və nasazlıqların rəqəmsal diaqnostikası.</p>
+                    <div class="card-footer-btn">
+                        <span class="file-info"><i class="fa-regular fa-file-pdf"></i> PDF (5.4 MB)</span>
+                        <a href="fayllar/avtomobil_konstruksiyasi.pdf" download class="download-link">Yüklə <i class="fa-solid fa-arrow-down"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modern-book-card" data-category="it">
+                <div class="card-image-zone">
+                    <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=400" alt="Kitab">
+                    <span class="card-tag">Rəqəmsal</span>
+                </div>
+                <div class="card-content-zone">
+                    <span class="profession-code"><i class="fa-solid fa-code"></i> İT Mütəxəssisi</span>
+                    <h3>Proqramlaşdırmanın Əsasları</h3>
+                    <p class="author-name">Mütəxəssis E. Əliyev</p>
+                    <p class="summary-text">Alqoritmik təfəkkür, dəyişənlər və Python/JS strukturları.</p>
+                    <div class="card-footer-btn">
+                        <span class="file-info"><i class="fa-regular fa-file-pdf"></i> PDF (6.8 MB)</span>
+                        <a href="fayllar/proqramlasdirmanin_esaslari.pdf" download class="download-link">Yüklə <i class="fa-solid fa-arrow-down"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modern-book-card" data-category="xidmet">
+                <div class="card-image-zone">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=400" alt="Kitab">
+                    <span class="card-tag">Qida</span>
+                </div>
+                <div class="card-content-zone">
+                    <span class="profession-code"><i class="fa-solid fa-utensils"></i> Aşpaz</span>
+                    <h3>Mətbəxin Əsasları</h3>
+                    <p class="author-name">Şef T. Axundov</p>
+                    <p class="summary-text">Qida məhsullarının ilkin emalı və isti təamların hazırlanması.</p>
+                    <div class="card-footer-btn">
+                        <span class="file-info"><i class="fa-regular fa-file-pdf"></i> PDF (7.8 MB)</span>
+                        <a href="fayllar/metbex_esaslari.pdf" download class="download-link">Yüklə <i class="fa-solid fa-arrow-down"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modern-book-card" data-category="dizayn">
+                <div class="card-image-zone">
+                    <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400" alt="Kitab">
+                    <span class="card-tag">Dizayn</span>
+                </div>
+                <div class="card-content-zone">
+                    <span class="profession-code"><i class="fa-solid fa-scissors"></i> Dərzi / Modelyer</span>
+                    <h3>Geyimlərin Konstruksiya Edilməsi</h3>
+                    <p class="author-name">Usta N. Quliyeva</p>
+                    <p class="summary-text">Parçaların növləri, ölçülərin götürülməsi və geyim eskizləri.</p>
+                    <div class="card-footer-btn">
+                        <span class="file-info"><i class="fa-regular fa-file-pdf"></i> PDF (6.1 MB)</span>
+                        <a href="fayllar/derzilik_ve_tikis.pdf" download class="download-link">Yüklə <i class="fa-solid fa-arrow-down"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modern-book-card" data-category="bedii">
+                <div class="card-image-zone">
+                    <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400" alt="Roman">
+                    <span class="card-tag">Klassika</span>
+                </div>
+            <div class="card-content-zone">
+                 <span class="profession-code"><i class="fa-solid fa-feather-pointed"></i> Dünya Ədəbiyyatı</span>
+                 <h3>Bədii Əsərlər və Seçilmiş Romanlar</h3>
+                 <p class="author-name">Klassik Müəlliflər</p>
+                 <p class="summary-text">Tələbələrin dünyagörüşünü və bədii təfəkkürünü inkişaf etdirəcək bədii ədəbiyyat inciləri və məşhur romanlar.</p>
+                 <div class="card-footer-btn">
+                   <span class="file-info"><i class="fa-regular fa-file-pdf"></i> PDF (4.8 MB)</span>
+                   <a href="fayllar/roman_kolleksiyasi.pdf" download class="download-link">Yüklə <i class="fa-solid fa-arrow-down"></i></a>
+                </div>
+           </div>
+       </div>
+
+                <div class="modern-book-card" data-category="diller">
+                   <div class="card-image-zone">
+                        <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=400" alt="Dil Kitabı">
+                        <span class="card-tag">Dilçilik</span>
+                    </div>
+                <div class="card-content-zone">
+                     <span class="profession-code"><i class="fa-solid fa-language"></i> Dil Kursları</span>
+                     <h3>Texniki İngilis Dili və Qrammatika Esasları</h3>
+                     <p class="author-name">Dil Mütəxəssisləri</p>
+                     <p class="summary-text">Peşə fəaliyyətində və beynəlxalq terminologiyada istifadə olunan təməl ingilis dili qaydaları və lüğət bazası.</p>
+                    <div class="card-footer-btn">
+                        <span class="file-info"><i class="fa-regular fa-file-pdf"></i> PDF (3.5 MB)</span>
+                        <a href="fayllar/ingilis_dili_esaslari.pdf" download class="download-link">Yüklə <i class="fa-solid fa-arrow-down"></i></a>
+                    </div>
+                </div>
+           </div>
+
+       </main>
+    </div>
+
+    <script src="kitabxana_core.js"></script>
+</body>
+</html>
+
