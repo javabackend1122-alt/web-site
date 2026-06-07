@@ -1,7 +1,4 @@
-// ==========================================================================
 // PORTAL MƏRKƏZİ NÜVƏ SİSTEMİ (SHARED CORE LOGIC)
-// ==========================================================================
-
 document.addEventListener("DOMContentLoaded", () => {
     // 1. TƏHLÜKƏSİZLİK VƏ GİRİŞ YOXLANIŞI
     const activeUser = JSON.parse(sessionStorage.getItem('activeUser'));

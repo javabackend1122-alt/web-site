@@ -3,76 +3,464 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qeydiyyat - Portal</title>
+    <title>Qeydiyyat — Cəlilabad DPTM Portal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --navy:     #0a1628;
+            --navy-mid: #112240;
+            --blue:     #1d4ed8;
+            --blue-mid: #2563eb;
+            --sky:      #38bdf8;
+            --green:    #10b981;
+            --gold:     #f59e0b;
+            --purple:   #8b5cf6;
+            --rose:     #f43f5e;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--navy);
+            display: flex; align-items: center; justify-content: center;
+            padding: 32px 16px;
+            position: relative; overflow-x: hidden;
+        }
+
+        /* Animated background */
+        body::before {
+            content: '';
+            position: fixed; inset: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 15% 30%, rgba(37,99,235,0.2) 0%, transparent 55%),
+                radial-gradient(ellipse 60% 70% at 85% 70%, rgba(56,189,248,0.12) 0%, transparent 55%),
+                radial-gradient(ellipse 50% 50% at 50% 50%, rgba(139,92,246,0.06) 0%, transparent 60%);
+            animation: bgPulse 10s ease-in-out infinite alternate;
+            pointer-events: none; z-index: 0;
+        }
+
+        body::after {
+            content: '';
+            position: fixed; inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+            background-size: 52px 52px;
+            pointer-events: none; z-index: 0;
+        }
+
+        @keyframes bgPulse {
+            from { opacity: 0.7; } to { opacity: 1; }
+        }
+
+        /* Card */
+        .reg-card {
+            position: relative; z-index: 1;
+            width: 100%; max-width: 580px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 28px;
+            padding: 48px 44px;
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            box-shadow:
+                0 0 0 1px rgba(255,255,255,0.04) inset,
+                0 32px 80px rgba(0,0,0,0.4),
+                0 8px 24px rgba(0,0,0,0.2);
+            animation: cardIn 0.6s cubic-bezier(0.4,0,0.2,1) both;
+        }
+
+        @keyframes cardIn {
+            from { opacity: 0; transform: translateY(24px) scale(0.98); }
+            to   { opacity: 1; transform: none; }
+        }
+
+        /* Top glow line */
+        .reg-card::before {
+            content: '';
+            position: absolute; top: 0; left: 10%; right: 10%; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(56,189,248,0.6), rgba(139,92,246,0.4), transparent);
+            border-radius: 1px;
+        }
+
+        /* Header */
+        .reg-header { text-align: center; margin-bottom: 36px; }
+
+        .reg-logo {
+            display: inline-flex; align-items: center; gap: 10px;
+            text-decoration: none; margin-bottom: 28px;
+        }
+        .reg-logo-icon {
+            width: 44px; height: 44px; border-radius: 12px;
+            background: linear-gradient(135deg, var(--blue-mid), var(--sky));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px; color: #fff;
+            box-shadow: 0 6px 20px rgba(37,99,235,0.4);
+        }
+        .reg-logo-name { font-size: 16px; font-weight: 800; color: #fff; }
+        .reg-logo-sub  { font-size: 10px; color: rgba(255,255,255,0.35); letter-spacing: 1px; text-transform: uppercase; margin-top: 1px; }
+
+        .reg-eyebrow {
+            display: inline-flex; align-items: center; gap: 7px;
+            background: rgba(56,189,248,0.1); border: 1px solid rgba(56,189,248,0.2);
+            color: var(--sky); padding: 6px 14px; border-radius: 50px;
+            font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .reg-title { font-size: 26px; font-weight: 800; color: #fff; letter-spacing: -0.5px; margin-bottom: 6px; }
+        .reg-sub   { font-size: 13.5px; color: rgba(255,255,255,0.4); line-height: 1.6; }
+
+        /* Role selector */
+        .role-label {
+            font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+            color: rgba(255,255,255,0.35); margin-bottom: 12px; display: block;
+        }
+
+        .role-grid {
+            display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-bottom: 32px;
+        }
+
+        .role-card {
+            background: rgba(255,255,255,0.05);
+            border: 1.5px solid rgba(255,255,255,0.08);
+            border-radius: 14px; padding: 14px 6px;
+            display: flex; flex-direction: column; align-items: center; gap: 8px;
+            cursor: pointer; transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            text-align: center; position: relative; overflow: hidden;
+        }
+        .role-card::after {
+            content: '';
+            position: absolute; inset: 0; opacity: 0;
+            transition: opacity 0.25s;
+        }
+        .role-card:hover { transform: translateY(-3px); border-color: rgba(255,255,255,0.18); background: rgba(255,255,255,0.08); }
+
+        .role-card.active { transform: translateY(-3px); }
+        .role-card.active.c-blue   { border-color: var(--blue-mid); background: rgba(37,99,235,0.15);  box-shadow: 0 8px 24px rgba(37,99,235,0.25); }
+        .role-card.active.c-green  { border-color: var(--green);    background: rgba(16,185,129,0.15); box-shadow: 0 8px 24px rgba(16,185,129,0.25); }
+        .role-card.active.c-gold   { border-color: var(--gold);     background: rgba(245,158,11,0.15); box-shadow: 0 8px 24px rgba(245,158,11,0.25); }
+        .role-card.active.c-purple { border-color: var(--purple);   background: rgba(139,92,246,0.15); box-shadow: 0 8px 24px rgba(139,92,246,0.25); }
+        .role-card.active.c-rose   { border-color: var(--rose);     background: rgba(244,63,94,0.15);  box-shadow: 0 8px 24px rgba(244,63,94,0.25); }
+
+        .role-icon {
+            width: 40px; height: 40px; border-radius: 11px;
+            display: flex; align-items: center; justify-content: center; font-size: 18px;
+        }
+        .c-blue   .role-icon { background: rgba(37,99,235,0.2);  color: #60a5fa; }
+        .c-green  .role-icon { background: rgba(16,185,129,0.2); color: #34d399; }
+        .c-gold   .role-icon { background: rgba(245,158,11,0.2); color: #fbbf24; }
+        .c-purple .role-icon { background: rgba(139,92,246,0.2); color: #c4b5fd; }
+        .c-rose   .role-icon { background: rgba(244,63,94,0.2);  color: #fb7185; }
+
+        .role-card.active.c-blue   .role-icon { background: rgba(37,99,235,0.3);  }
+        .role-card.active.c-green  .role-icon { background: rgba(16,185,129,0.3); }
+        .role-card.active.c-gold   .role-icon { background: rgba(245,158,11,0.3); }
+        .role-card.active.c-purple .role-icon { background: rgba(139,92,246,0.3); }
+        .role-card.active.c-rose   .role-icon { background: rgba(244,63,94,0.3);  }
+
+        .role-name {
+            font-size: 11.5px; font-weight: 700; color: rgba(255,255,255,0.55); line-height: 1.3;
+        }
+        .role-card.active .role-name { color: #fff; }
+
+        .role-check {
+            position: absolute; top: 7px; right: 7px;
+            width: 18px; height: 18px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 9px; color: #fff; opacity: 0;
+            transition: opacity 0.2s;
+        }
+        .role-card.active .role-check { opacity: 1; }
+        .c-blue   .role-check { background: var(--blue-mid); }
+        .c-green  .role-check { background: var(--green); }
+        .c-gold   .role-check { background: var(--gold); }
+        .c-purple .role-check { background: var(--purple); }
+        .c-rose   .role-check { background: var(--rose); }
+
+        /* Form */
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .form-group { margin-bottom: 18px; }
+        .form-group.full { grid-column: span 2; }
+
+        .form-label {
+            display: flex; align-items: center; gap: 7px;
+            font-size: 12.5px; font-weight: 700; color: rgba(255,255,255,0.55);
+            margin-bottom: 8px; letter-spacing: 0.2px;
+        }
+        .form-label i { font-size: 12px; color: var(--sky); }
+
+        .form-control {
+            width: 100%; height: 46px; padding: 0 16px;
+            font-size: 14px; font-family: 'Plus Jakarta Sans', sans-serif;
+            background: rgba(255,255,255,0.07);
+            border: 1.5px solid rgba(255,255,255,0.1);
+            border-radius: 11px; color: #fff; outline: none;
+            transition: all 0.25s ease;
+        }
+        .form-control::placeholder { color: rgba(255,255,255,0.22); }
+        .form-control:focus {
+            border-color: var(--sky);
+            background: rgba(255,255,255,0.1);
+            box-shadow: 0 0 0 4px rgba(56,189,248,0.12);
+        }
+
+        /* Focus color by active role */
+        body.role-telebe  .form-control:focus { border-color: #60a5fa; box-shadow: 0 0 0 4px rgba(37,99,235,0.15); }
+        body.role-muallim .form-control:focus { border-color: #34d399; box-shadow: 0 0 0 4px rgba(16,185,129,0.15); }
+        body.role-direktor .form-control:focus { border-color: #fbbf24; box-shadow: 0 0 0 4px rgba(245,158,11,0.15); }
+        body.role-muavin  .form-control:focus { border-color: #c4b5fd; box-shadow: 0 0 0 4px rgba(139,92,246,0.15); }
+        body.role-admin   .form-control:focus { border-color: #fb7185; box-shadow: 0 0 0 4px rgba(244,63,94,0.15); }
+
+        .input-wrap { position: relative; }
+        .input-wrap .form-control { padding-right: 46px; }
+        .toggle-pass {
+            position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
+            color: rgba(255,255,255,0.3); cursor: pointer; font-size: 15px;
+            transition: color 0.2s; z-index: 2;
+        }
+        .toggle-pass:hover { color: var(--sky); }
+
+        .form-help {
+            font-size: 11.5px; color: rgba(255,255,255,0.3);
+            margin-top: 6px; line-height: 1.5; display: block;
+        }
+        .form-help b { color: var(--sky); }
+
+        /* ID badge */
+        .id-badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 700;
+            margin-bottom: 6px; letter-spacing: 0.5px;
+            background: rgba(56,189,248,0.12); color: var(--sky);
+            border: 1px solid rgba(56,189,248,0.2);
+            transition: all 0.3s;
+        }
+
+        /* Status */
+        .status-message {
+            padding: 12px 16px; border-radius: 11px;
+            font-size: 13px; font-weight: 600; margin-bottom: 20px;
+            display: none; align-items: center; gap: 10px;
+            backdrop-filter: blur(10px);
+        }
+        .status-message.error   { display: flex; color: #fca5a5; background: rgba(239,68,68,0.12); border: 1px solid rgba(239,68,68,0.25); }
+        .status-message.success { display: flex; color: #6ee7b7; background: rgba(16,185,129,0.12); border: 1px solid rgba(16,185,129,0.25); }
+
+        /* Submit */
+        .reg-submit {
+            width: 100%; height: 50px; border: none; border-radius: 12px;
+            font-size: 15px; font-weight: 800; font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #fff; cursor: pointer;
+            display: flex; align-items: center; justify-content: center; gap: 9px;
+            margin-top: 6px; transition: all 0.25s ease;
+            background: linear-gradient(135deg, var(--blue-mid), var(--blue));
+            box-shadow: 0 8px 24px rgba(37,99,235,0.35);
+            position: relative; overflow: hidden;
+        }
+        .reg-submit::before {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+        }
+        .reg-submit:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(37,99,235,0.45); }
+        .reg-submit:active { transform: scale(0.99); }
+
+        /* Role-based submit colors */
+        body.role-telebe   .reg-submit { background: linear-gradient(135deg, #2563eb, #1d4ed8); box-shadow: 0 8px 24px rgba(37,99,235,0.35); }
+        body.role-muallim  .reg-submit { background: linear-gradient(135deg, #059669, #047857); box-shadow: 0 8px 24px rgba(16,185,129,0.35); }
+        body.role-direktor .reg-submit { background: linear-gradient(135deg, #d97706, #b45309); box-shadow: 0 8px 24px rgba(245,158,11,0.35); }
+        body.role-muavin   .reg-submit { background: linear-gradient(135deg, #7c3aed, #6d28d9); box-shadow: 0 8px 24px rgba(139,92,246,0.35); }
+        body.role-admin    .reg-submit { background: linear-gradient(135deg, #e11d48, #be123c); box-shadow: 0 8px 24px rgba(244,63,94,0.35); }
+
+        /* Footer */
+        .reg-footer {
+            text-align: center; margin-top: 24px; padding-top: 22px;
+            border-top: 1px solid rgba(255,255,255,0.07);
+        }
+        .reg-footer a {
+            font-size: 13.5px; font-weight: 600; color: rgba(255,255,255,0.35);
+            text-decoration: none; display: inline-flex; align-items: center; gap: 7px;
+            transition: color 0.2s;
+        }
+        .reg-footer a:hover { color: var(--sky); }
+
+        /* Divider */
+        .form-divider {
+            display: flex; align-items: center; gap: 12px; margin: 4px 0 20px;
+        }
+        .form-divider span {
+            font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.2);
+            white-space: nowrap; letter-spacing: 0.5px; text-transform: uppercase;
+        }
+        .form-divider::before, .form-divider::after {
+            content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.07);
+        }
+
+        @media (max-width: 560px) {
+            .reg-card { padding: 32px 24px; }
+            .role-grid { grid-template-columns: repeat(3, 1fr); }
+            .form-row { grid-template-columns: 1fr; }
+            .form-group.full { grid-column: span 1; }
+            .reg-title { font-size: 22px; }
+        }
+        @media (max-width: 360px) {
+            .role-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
 </head>
-<body class="auth-body">
+<body class="role-telebe">
 
-    <div class="auth-container">
-        <div class="auth-box">
-            <div class="auth-box__icon">
-                <i class="fa-solid fa-book-open-reader"></i>
+<div class="reg-card">
+
+    <!-- Header -->
+    <div class="reg-header">
+        <a href="index.html" class="reg-logo">
+            <div class="reg-logo-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div>
+                <div class="reg-logo-name">Cəlilabad DPTM</div>
+                <div class="reg-logo-sub">Rəsmi Portal</div>
             </div>
-            
-            <h2 class="auth-box__title">Portalda Qeydiyyat</h2>
-            <p class="auth-box__subtitle">Məlumatları düzgün daxil edərək hesabınızı yaradın</p>
-            
-            <div class="role-selector">
-                <button type="button" class="role-btn active" data-role="telebe">
-                    <i class="fa-solid fa-user-graduate"></i> Tələbə
-                </button>
-                <button type="button" class="role-btn" data-role="muallim">
-                    <i class="fa-solid fa-chalkboard-user"></i> Müəllim
-                </button>
-                <button type="button" class="role-btn" data-role="admin">
-                    <i class="fa-solid fa-user-shield"></i> Administrator
-                </button>
-            </div>
-            
-            <div id="statusMessage" class="status-message" style="display: none;"></div>
+        </a>
 
-            <form id="registerForm">
-                <div class="form-group">
-                    <label for="regUsername"><i class="fas fa-user"></i> İstifadəçi adı (Username)</label>
-                    <input type="text" id="regUsername" class="form-control" placeholder="istifadəçi_adı" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="regEmail"><i class="fas fa-envelope"></i> E-mail Ünvanı</label>
-                    <input type="email" id="regEmail" class="form-control" placeholder="nümunə@mail.com" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="regPassword"><i class="fas fa-lock"></i> Şifrə</label>
-                    <div style="position: relative; display: flex; align-items: center;">
-                        <input type="password" id="regPassword" class="form-control" placeholder="••••••••" style="padding-right: 45px;" required>
-                        <i class="fas fa-eye toggle-password" id="togglePasswordIcon" style="position: absolute; right: 15px; cursor: pointer; color: #94a3b8; font-size: 16px; z-index: 10;"></i>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="regId"><i class="fas fa-id-card-clip"></i> Təyin Olunacaq ID Nömrəsi</label>
-                    <input type="text" id="regId" class="form-control" placeholder="Məsələn: TEL-001" required autocomplete="off">
-                    <small id="idHelp" class="form-help">Vəzifənizə uyğun özəl ID-nizi daxil edin (TEL- prefiqsi ilə).</small>
-                </div>
-
-                <button type="submit" class="btn btn--primary btn--block">
-                    <span id="submitText">Tələbə Qeydiyyatını Tamamla</span> <i class="fas fa-check-circle"></i>
-                </button>
-            </form>
-
-            <div class="auth-box__footer">
-                <a href="login.html"><i class="fa-solid fa-arrow-right-to-bracket"></i> Artıq hesabınız var? Daxil olun</a>
-            </div>
-        </div>
+        <div class="reg-eyebrow"><i class="fas fa-user-plus"></i> Yeni Hesab</div>
+        <h1 class="reg-title">Qeydiyyatdan keçin</h1>
+        <p class="reg-sub">Vəzifənizi seçin və məlumatlarınızı daxil edin</p>
     </div>
 
-    <script src="auth.js"></script>
-    <script src="security_keys.js"></script>
-    
-</body>
-</html>
+    <!-- Role selector -->
+    <span class="role-label"><i class="fas fa-sitemap" style="margin-right:5px;opacity:.5;"></i> Vəzifənizi seçin</span>
+    <div class="role-grid">
+
+        <button type="button" class="role-card c-blue active" data-role="telebe"
+                data-prefix="TEL-" data-label="Tələbə Qeydiyyatı">
+            <div class="role-check"><i class="fas fa-check"></i></div>
+            <div class="role-icon"><i class="fas fa-user-graduate"></i></div>
+            <div class="role-name">Tələbə</div>
+        </button>
+
+        <button type="button" class="role-card c-green" data-role="muallim"
+                data-prefix="MUE-" data-label="Müəllim Qeydiyyatı">
+            <div class="role-check"><i class="fas fa-check"></i></div>
+            <div class="role-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+            <div class="role-name">Müəllim</div>
+        </button>
+
+        <button type="button" class="role-card c-gold" data-role="direktor"
+                data-prefix="DIR-" data-label="Direktor Qeydiyyatı">
+            <div class="role-check"><i class="fas fa-check"></i></div>
+            <div class="role-icon"><i class="fas fa-briefcase"></i></div>
+            <div class="role-name">Direktor</div>
+        </button>
+
+        <button type="button" class="role-card c-purple" data-role="muavin"
+                data-prefix="MUV-" data-label="Müavin Qeydiyyatı">
+            <div class="role-check"><i class="fas fa-check"></i></div>
+            <div class="role-icon"><i class="fas fa-user-tie"></i></div>
+            <div class="role-name">Müavin</div>
+        </button>
+
+        <button type="button" class="role-card c-rose" data-role="admin"
+                data-prefix="ADM-" data-label="Sistem İdarəçisi Qeydiyyatı">
+            <div class="role-check"><i class="fas fa-check"></i></div>
+            <div class="role-icon"><i class="fas fa-shield-halved"></i></div>
+            <div class="role-name">Sistem<br>İdarəçisi</div>
+        </button>
+
+    </div>
+
+    <!-- Status -->
+    <div id="statusMessage" class="status-message"></div>
+
+    <!-- Form -->
+    <form id="registerForm">
+        <div class="form-row">
+            <div class="form-group">
+                <label class="form-label"><i class="fas fa-user"></i> İstifadəçi adı</label>
+                <input type="text" id="regUsername" class="form-control" placeholder="istifadəçi_adı" required autocomplete="username">
+            </div>
+            <div class="form-group">
+                <label class="form-label"><i class="fas fa-envelope"></i> E-mail</label>
+                <input type="email" id="regEmail" class="form-control" placeholder="ad@gmail.com" required autocomplete="email">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label"><i class="fas fa-lock"></i> Şifrə</label>
+            <div class="input-wrap">
+                <input type="password" id="regPassword" class="form-control" placeholder="Minimum 6 simvol" required autocomplete="new-password">
+                <i class="fas fa-eye toggle-pass" id="togglePasswordIcon"></i>
+            </div>
+        </div>
+
+        <div class="form-divider"><span>Şəxsiyyət məlumatları</span></div>
+
+        <div class="form-group">
+            <label class="form-label"><i class="fas fa-id-card"></i> Servis ID nömrəsi</label>
+            <div class="id-badge" id="idBadge"><i class="fas fa-tag"></i> TEL- prefiksi</div>
+            <input type="text" id="regId" class="form-control" placeholder="TEL-001" required autocomplete="off">
+            <small class="form-help" id="idHelp">
+                Tələbə üçün <b>TEL-</b> prefiksi ilə ID nömrənizi daxil edin.
+            </small>
+        </div>
+
+        <button type="submit" class="reg-submit" id="submitBtn">
+            <i class="fas fa-check-circle"></i>
+            <span id="submitText">Tələbə Qeydiyyatını Tamamla</span>
+        </button>
+    </form>
+
+    <div class="reg-footer">
+        <a href="login.html">
+            <i class="fas fa-arrow-right-to-bracket"></i>
+            Artıq hesabınız var? Daxil olun
+        </a>
+    </div>
+
+</div>
+
+<script src="auth.js"></script>
+<script src="security_keys.js"></script>
+<script>
+    // Role config
+    const roleConfig = {
+        telebe:   { prefix: 'TEL-', label: 'Tələbə Qeydiyyatını Tamamla',          hint: 'Tələbə üçün <b>TEL-</b> prefiksi ilə ID nömrənizi daxil edin.',           badge: 'TEL- prefiksi', bodyClass: 'role-telebe'  },
+        muallim:  { prefix: 'MUE-', label: 'Müəllim Qeydiyyatını Tamamla',         hint: 'Müəllim üçün <b>MUE-</b> prefiksi ilə ID nömrənizi daxil edin.',          badge: 'MUE- prefiksi', bodyClass: 'role-muallim' },
+        direktor: { prefix: 'DIR-', label: 'Direktor Qeydiyyatını Tamamla',         hint: 'Direktor üçün <b>DIR-</b> prefiksi ilə ID nömrənizi daxil edin.',         badge: 'DIR- prefiksi', bodyClass: 'role-direktor'},
+        muavin:   { prefix: 'MUV-', label: 'Müavin Qeydiyyatını Tamamla',          hint: 'Direktor müavini üçün <b>MUV-</b> prefiksi ilə ID nömrənizi daxil edin.', badge: 'MUV- prefiksi', bodyClass: 'role-muavin'  },
+        admin:    { prefix: 'ADM-', label: 'Sistem İdarəçisi Qeydiyyatını Tamamla', hint: 'Sistem idarəçisi üçün <b>ADM-</b> prefiksi ilə ID nömrənizi daxil edin.',  badge: 'ADM- prefiksi', bodyClass: 'role-admin'   }
+    };
+
+    let activeRole = 'telebe';
+
+    document.querySelectorAll('.role-card').forEach(card => {
+        card.addEventListener('click', function() {
+            document.querySelectorAll('.role-card').forEach(c => c.classList.remove('active'));
+            this.classList.add('active');
+            activeRole = this.dataset.role;
+            const cfg = roleConfig[activeRole];
+
+            // Update body class for theme colors
+            document.body.className = cfg.bodyClass;
+
+            // Update form elements
+            document.getElementById('regId').placeholder = cfg.prefix + '001';
+            document.getElementById('submitText').textContent = cfg.label;
+            document.getElementById('idHelp').innerHTML = cfg.hint;
+            document.getElementById('idBadge').innerHTML = '<i class="fas fa-tag"></i> ' + cfg.badge;
+        });
+    });
+
+    // Toggle password
+    document.getElementById('togglePasswordIcon').addEventListener('click', function() {
+        const inp = document.getElementById('regPassword');
+        const isPass = inp.type === 'password';
+        inp.type = isPass ? 'text' : 'password';
+        this.className = (isPass ? 'fas fa-eye-slash' : 'fas fa-eye') + ' toggle-pass';
+    });
+</script>
 </body>
 </html>

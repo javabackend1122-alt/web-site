@@ -3,161 +3,576 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cəlilabad Dövlət Peşə Təhsil Mərkəzi">
+    <meta name="description" content="Cəlilabad Dövlət Peşə Təhsil Mərkəzi — Rəsmi Portal">
     <title>Cəlilabad Dövlət Peşə Təhsil Mərkəzi</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-     <header class="header">
-        <nav class="navbar">
-            <div class="container navbar__inner">
-                
-                <div class="nav-left-brand">
-                    <div class="animated-school-badge">
-                        <i class="fa-solid fa-graduation-cap pulse-icon"></i>
-                        <div class="badge-glow-ring"></div>
-                    </div>
-                    <div class="school-brand-text">
-                        <h2 class="sliding-text">Cəlilabad DPTM</h2>
-                        <span class="sub-digital-text"><i class="fa-solid fa-bolt"></i> Rəqəmsal Portal</span>
-                    </div>
+
+<!-- ── LOADER ─────────────────────────────────────── -->
+<div id="page-loader">
+    <div class="loader-emblem">
+        <svg viewBox="0 0 72 72">
+            <defs>
+                <linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#2563eb"/>
+                    <stop offset="100%" stop-color="#38bdf8"/>
+                </linearGradient>
+            </defs>
+            <circle cx="36" cy="36" r="30" class="loader-ring"/>
+            <circle cx="36" cy="36" r="30" class="loader-arc" stroke-dasharray="160" stroke-dashoffset="160"
+                style="stroke:url(#lg);fill:none;stroke-width:2.5;stroke-linecap:round;
+                       animation:arcDraw 1.4s cubic-bezier(0.4,0,0.2,1) forwards;"/>
+            <text x="50%" y="54%" text-anchor="middle" fill="#10b981"
+                  font-size="18" font-weight="800" font-family="Plus Jakarta Sans,sans-serif">D</text>
+        </svg>
+    </div>
+    <div class="loader-brand">Cəlilabad <span>DPTM</span></div>
+    <div class="loader-progress-wrap"><div class="loader-progress-bar"></div></div>
+</div>
+
+<!-- ── LIGHTBOX ───────────────────────────────────── -->
+<div id="lightbox">
+    <button id="lb-close"><i class="fas fa-times"></i></button>
+    <img id="lb-img" src="" alt="">
+</div>
+
+<!-- ── SCROLL TO TOP ──────────────────────────────── -->
+<button id="to-top" aria-label="Yuxarı"><i class="fas fa-arrow-up"></i></button>
+
+<!-- ══════════════════════════════════════════════════
+     TOP BAR
+═══════════════════════════════════════════════════ -->
+<div class="top-bar">
+    <div class="container">
+        <div class="top-bar-left">
+            <a href="tel:0515530103"><i class="fas fa-phone-alt"></i> 051 553 01 03</a>
+            <a href="mailto:calilabad@vet.edu.az"><i class="fas fa-envelope"></i> calilabad@vet.edu.az</a>
+            <span><i class="fas fa-map-marker-alt" style="color:var(--sky);"></i> Göytəpə şəh., Cəlilabad</span>
+        </div>
+        <div class="top-bar-right">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <span style="color:rgba(255,255,255,0.2);">|</span>
+            <a href="login.html"><i class="fas fa-sign-in-alt"></i> Giriş</a>
+        </div>
+    </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════════════════ -->
+<header class="header" id="header">
+    <nav class="container navbar-inner">
+
+        <!-- Brand -->
+        <a href="index.html" class="brand">
+            <div class="brand-badge">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="brand-text">
+                <div class="brand-name">Cəlilabad DPTM</div>
+                <div class="brand-sub">
+                    <span></span> Rəsmi Dövlət Portalı
                 </div>
-   
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-menu__link active-link">Ana Səhifə</a></li>
-                    
-                    <li><a href="#" id="dynamicPortalBtn" class="btn btn--secondary" style="display: none; background-color: #38bdf8; color: #0f172a; font-weight: bold;">Mənim Platformam</a></li>
-
-                    <li class="dropdown">
-                       <a href="#" class="dropbtn">Platformalar ▾</a>
-                       <div class="dropdown-content">
-                         <a href="yemekxana_platformasu.html"><i class="fa-solid fa-utensils"></i> Yeməkxana Platforması</a>
-                         <a href="kitabxana.html"><i class="fa-solid fa-book"></i> Kitabxana Platforması</a>
-                       </div>
-                    </li>
-                    
-                    <li><a href="#fotolar" class="btn btn--primary">Fotolar</a></li>
-                    <li><a href="#videolar" class="btn btn--primary">Videolar</a></li>
-                    <li><a href="xeberler.html" class="btn btn--primary">Xəbərlər</a></li>
-                    <li><a href="faq.html" class="btn btn--primary">FAQ</a></li>
-                    <li><a href="contact.html" class="btn btn--primary">Əlaqə</a></li>
-                </ul>
-                <a href="login.html" id="navSignInBtn" class="btn btn--primary">Sign in</a>
             </div>
-        </nav>
-    </header>
+        </a>
 
-    <section class="hero" id="hero">
-        <div class="container hero__content">
-            <span style="display: inline-block; background: rgba(56, 189, 248, 0.15); color: #38bdf8; padding: 6px 16px; border-radius: 50px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; border: 1px solid rgba(56, 189, 248, 0.3);">
-                Cəlilabad Dövlət Peşə Təhsil Mərkəzi
-            </span>
-            
-            <h1 class="hero__title" style="font-size: 48px; max-width: 800px; margin: 0 auto 20px;">
-                Daha <span class="highlight">Peşəkar</span> Gələcək Naminə
-            </h1>
-            
-            <p class="hero__subtitle" style="font-size: 19px; max-width: 700px; margin-bottom: 40px; color: #cbd5e1;">
-                Bu gün aqrar və texnoloji inkişafın əsas komponentlərindən biri peşəkar insan kapitalının formalaşdırılmasıdır.
-            </p>
+        <!-- Links -->
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active"><i class="fas fa-home" style="font-size:12px;"></i> Ana Səhifə</a></li>
+            <li class="has-dropdown">
+                <a href="#">Platformalar</a>
+                <div class="dropdown-panel">
+                    <a href="yemekxana_platformasu.html"><i class="fa-solid fa-utensils"></i> Yeməkxana Platforması</a>
+                    <a href="kitabxana.html"><i class="fa-solid fa-book"></i> Kitabxana Platforması</a>
+                </div>
+            </li>
+            <li><a href="#fotolar">Fotolar</a></li>
+            <li><a href="#videolar">Videolar</a></li>
+            <li><a href="xeberler.html">Xəbərlər</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Əlaqə</a></li>
+        </ul>
 
-            <div class="search-box" style="margin-bottom: 0;">
-                <input type="text" id="searchInput" class="search-box__input" placeholder="Portal üzrə axtarış...">
-                <button class="search-box__btn"><i class="fas fa-search"></i></button>
-            </div>
+        <!-- Actions -->
+        <div class="nav-actions">
+            <button class="btn-icon" id="themeBtn" aria-label="Tema">
+                <i class="fas fa-moon" id="themeIcon"></i>
+            </button>
+            <a href="login.html" class="btn-primary">
+                <i class="fas fa-sign-in-alt"></i> Daxil ol
+            </a>
+            <button class="hamburger" id="burger" aria-label="Menyu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-    </section>
+    </nav>
+</header>
 
-    <section id="fotolar" class="section section--light">
+<!-- ══════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════ -->
+<section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+
+    <!-- Stats mini bar -->
+    <div class="hero-stats">
         <div class="container">
-            <h2 class="section__title">Fotolar</h2>
-            <div class="gallery-grid">
-                <img src="http://celilabad-ih.gov.az/storage/photos/2/20%20iyul/1689846086_02554c63584e75925f2b814c6797559f.jpg" alt="" loading="lazy">
-                <img src="http://celilabad-ih.gov.az/storage/photos/2/20%20iyul/1689846092_686c902b745221eb261f1adac3ccfe22.jpg" alt="" loading="lazy">
-                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846086_30eb1f44cf12e90ab52469c6057ef032.jpg" alt="" loading="lazy">
-                <img src="http://celilabad-ih.gov.az/storage/photos/2/20%20iyul/1689846088_0588f7e2594b4dc81a83ff1ac3bcc8f9.jpg" alt="" loading="lazy">
-                <img src="http://celilabad-ih.gov.az/storage/photos/2/20%20iyul/1689846094_3cb05fceef24ff1b7e6a0231e1557ad4.jpg" alt="" loading="lazy">
-                <img src="http://celilabad-ih.gov.az/storage/photos/2/20%20iyul/1689846087_76dfca745f13544db4ef7aeb62384a8d.jpg" alt="" loading="lazy">
-                <img src="http://celilabad-ih.gov.az/storage/photos/2/20%20iyul/1689846097_bafa979cd7a1af627a6fbedbc7290dd1.jpg" alt="" loading="lazy">
-                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846089_49e8c4af4db7f012d6dd3aa59cf4f0d9.jpg" alt="" loading="lazy">
-                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846098_3228120e940e331a1617eaca61cbb023.jpg" alt="" loading="lazy">
-                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846095_faeeb8a3b33a80de135d3929a31cf5a6.jpg" alt="" loading="lazy">
-                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846099_d7bd414b61af3e8d82b050cbaa42f83b.jpg" alt="" loading="lazy">
-                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846100_1f2ca1b9b9dc32300d241fafc4454d64.jpg" alt="" loading="lazy">
-                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846101_3264d11c07e4dd82141b5d843f6babdd.jpg" alt="" loading="lazy">
-                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846102_1d379bd2b129cb503dd9c07bd20e9380.jpg" alt="" loading="lazy">
-                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846103_9a6b542b5e6431b6e01b94a8926279b5.jpg" alt="" loading="lazy">
-                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846103_ea21e5270d3ffeead6dbf93bf493d08c.jpg" alt="" loading="lazy">
-                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846104_e2b12497ce88fb284d6cf18d9c064aa3.jpg" alt="" loading="lazy">
-                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846104_15a777db5c160586c491c7e32328cf54.jpg" alt="" loading="lazy">
-                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846105_d027394a1f1f4625a11f87963b0a7cbc.jpg" alt="" loading="lazy">
-                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846106_fe7dd96f5a9cf131e61313ec7e3e9a8e.jpg" alt="" loading="lazy">
-                <img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846106_5bc46a835b3a04c67e669bd9f59c3984.jpg" alt="" loading="lazy">
-            </div>
-        </div>
-    </section>
-
-    <section id="videolar" class="section"> 
-        <div class="container">
-            <h2 class="section__title">Videolar</h2>
-              <div class="videos-grid">
-                <div class="video-item"><iframe src="https://www.youtube.com/embed/ENbjcJ9KJBg" title="Prezident Cəlilabad Dövlət Peşə Təhsil Mərkəzinin açılışında iştirak edib" frameborder="0" allowfullscreen></iframe></div>
-                <div class="video-item"><iframe src="https://www.youtube.com/embed/mLkOQrZQjK4" title="Prezident İlham Əliyev Cəlilabad Dövlət Peşə Təhsil Mərkəzində yaradılmış şəraitlə tanış olub" frameborder="0" allowfullscreen></iframe></div>
-                <div class="video-item"><iframe src="https://www.youtube.com/embed/5DsodB_wrcw" title="Prezident İlham Əliyev Cəlilabad Dövlət Peşə Təhsil Mərkəzinin açılışında iştirak edib" frameborder="0" allowfullscreen></iframe></div>
-                <div class="video-item"><iframe src="https://www.youtube.com/embed/0bxGCGtYU-g" title="Prezident İlham Əliyev Cəlilabad Dövlət Peşə Təhsil Mərkəzinin açılışında iştirak edib" frameborder="0" allowfullscreen></iframe></div>
-                <div class="video-item"><iframe src="https://www.youtube.com/embed/D8njrz0unqU" title="Cəlilabadda Yaradıcı zərif əllər adlı festival keçirilib" frameborder="0" allowfullscreen></iframe></div>
-                <div class="video-item"><iframe src="https://www.youtube.com/embed/m6EXNjfdJwM" title="Cəlilabad Dövlət Peşə Təhsil Mərkəzində Karyera və Peşə İmkanları Günü keçirilib" frameborder="0" allowfullscreen></iframe></div>
-                <div class="video-item"><iframe src="https://www.youtube.com/embed/rPprsf6uTLg" title="Prezident İlham Əliyev Cəlilabad Dövlət Peşə Təhsil Mərkəzinin açılışında iştirak edib" frameborder="0" allowfullscreen></iframe></div>
-                <div class="video-item"><iframe src="https://www.youtube.com/embed/M7xqJB3OCZQ" title="Lənkəran və Cəlilabad Peşə Təhsil Mərkəzlərindən xüsusi reportaj | ASAN TV" frameborder="0" allowfullscreen></iframe></div>
-                <div class="video-item"><iframe src="https://www.youtube.com/embed/HsSve2LUlVg" title="Lənkəran və Cəlilabad Dövlət Peşə Təhsil Mərkəzlərinə infotur təşkil olunub" frameborder="0" allowfullscreen></iframe></div>
-              </div>
-        </div>
-    </section>
-
-   <footer class="main-footer">
-    <div class="container footer-grid">
-        <div class="footer-col">
-            <div class="footer-logo-box">
-                <span style="font-weight: 800; color: #fff; font-size: 18px;"><i class="fa-solid fa-graduation-cap" style="color:#10b981;"></i> Cəlilabad DPTM</span>
-            </div>
-            <p class="footer-text">Gələcəyin peşəkarlarını yüksək standartlarla hazırlayan rəsmi təhsil platforması.</p>
-            <div class="footer-social-links">
-                <a href="https://www.facebook.com/CDPTM" target="_blank" title="Facebook səhifəmiz"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/" target="_blank" title="Instagram profilimiz"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.youtube.com/" target="_blank" title="YouTube kanalımız"><i class="fab fa-youtube"></i></a>
-            </div>
-        </div>
-
-        <div class="footer-col">
-            <h4 class="footer-heading">Faydalı Keçidlər</h4>
-            <ul class="footer-menu">
-                <li><a href="index.html"><i class="fas fa-angle-right"></i> Ana Səhifə</a></li>
-                <li><a href="faq.html"><i class="fas fa-angle-right"></i> FAQ</a></li>
-                <li><a href="contact.html"><i class="fas fa-angle-right"></i> Bizimlə Əlaqə</a></li>
-                <li><a href="login.html"><i class="fas fa-angle-right"></i> Platformaya Giriş</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-col">
-            <h4 class="footer-heading">Əlaqə Məlumatları</h4>
-            <ul class="footer-contact-list">
-                <li><i class="fas fa-map-marker-alt"></i> Göytəpə şəh Oqtay Eynullayev küç 2, 1514</li>
-                <li><i class="fas fa-phone-alt"></i> <a href="tel:0515530103">051 553 01 03</a></li>
-                <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/994504125795" target="_blank">WhatsApp</a></li>
-                <li><i class="fas fa-envelope"></i> <a href="mailto:calilabad@vet.edu.az">calilabad@vet.edu.az</a></li>
-            </ul>
+            <div class="hstat"><i class="fas fa-user-graduate"></i> <strong>2 000+</strong> Tələbə</div>
+            <div class="hstat"><i class="fas fa-chalkboard-teacher"></i> <strong>120+</strong> Müəllim</div>
+            <div class="hstat"><i class="fas fa-book-open"></i> <strong>35+</strong> İxtisas</div>
+            <div class="hstat"><i class="fas fa-award"></i> <strong>2023</strong> İldə açılıb</div>
         </div>
     </div>
 
-     <div class="footer-copyright">
-         <div class="container">
-            <p>&copy; 2026 Cəlilabad Dövlət Peşə Təhsil Mərkəzi. Bütün hüquqlar qorunur.</p>
+    <!-- Main -->
+    <div class="hero-main">
+        <div class="container">
+            <!-- Left -->
+            <div class="hero-left">
+                <div class="hero-eyebrow">
+                    <i class="fas fa-shield-alt"></i>
+                    Azərbaycan Respublikasının Rəsmi Peşə Mərkəzi
+                </div>
+
+                <h1 class="hero-title">
+                    Peşəkar<br>
+                    <span class="line2">Gələcəyinizi</span><br>
+                    Bizimlə Qurun
+                </h1>
+
+                <p class="hero-desc">
+                    Cəlilabad Dövlət Peşə Təhsil Mərkəzi — müasir texnologiya və aqrar sahələrdə gəncləri beynəlxalq standartlarda hazırlayan rəsmi dövlət qurumudur.
+                </p>
+
+                <!-- Quick action cards -->
+                <div class="hero-actions">
+                    <a href="kitabxana.html" class="hero-action-card">
+                        <div class="hac-icon blue"><i class="fas fa-book-open"></i></div>
+                        <div>
+                            <div class="hac-label">Kitabxana</div>
+                            <div class="hac-sub">700+ elektron kitab</div>
+                        </div>
+                    </a>
+                    <a href="yemekxana_platformasu.html" class="hero-action-card">
+                        <div class="hac-icon green"><i class="fas fa-utensils"></i></div>
+                        <div>
+                            <div class="hac-label">Yeməkxana</div>
+                            <div class="hac-sub">Günlük menyu</div>
+                        </div>
+                    </a>
+                    <a href="xeberler.html" class="hero-action-card">
+                        <div class="hac-icon gold"><i class="fas fa-newspaper"></i></div>
+                        <div>
+                            <div class="hac-label">Xəbərlər</div>
+                            <div class="hac-sub">Son hadisələr</div>
+                        </div>
+                    </a>
+                    <a href="contact.html" class="hero-action-card">
+                        <div class="hac-icon sky"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <div class="hac-label">Əlaqə</div>
+                            <div class="hac-sub">Bizimlə yazın</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="login.html" class="cta-main">
+                        <i class="fas fa-sign-in-alt"></i> Platformaya Daxil Ol
+                    </a>
+                    <a href="#fotolar" class="cta-ghost">
+                        <i class="fas fa-images"></i> Qalereya
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right — Info card -->
+            <div class="hero-visual">
+                <div class="hero-card-stack">
+                    <!-- Floating badges -->
+                    <div class="float-badge b1">
+                        <i class="fas fa-certificate" style="color:#f59e0b;font-size:22px;"></i>
+                        <div>
+                            <div class="fb-text">Dövlət Sertifikatı</div>
+                            <div class="fb-sub">Rəsmi akkreditasiya</div>
+                        </div>
+                    </div>
+                    <div class="float-badge b2">
+                        <i class="fas fa-star" style="color:#10b981;font-size:22px;"></i>
+                        <div>
+                            <div class="fb-text">Top Mərkəz</div>
+                            <div class="fb-sub">Azərbaycan 2024</div>
+                        </div>
+                    </div>
+
+                    <div class="hero-info-card">
+                        <div class="hic-header">
+                            <div class="hic-avatar"><i class="fas fa-university"></i></div>
+                            <div>
+                                <div class="hic-title">Cəlilabad DPTM</div>
+                                <div class="hic-sub">Dövlət Peşə Təhsil Mərkəzi</div>
+                            </div>
+                        </div>
+
+                        <div class="hic-stats">
+                            <div class="hic-stat">
+                                <div class="hic-num">2K+</div>
+                                <div class="hic-lbl">Tələbə</div>
+                            </div>
+                            <div class="hic-stat">
+                                <div class="hic-num">35+</div>
+                                <div class="hic-lbl">İxtisas</div>
+                            </div>
+                            <div class="hic-stat">
+                                <div class="hic-num">120+</div>
+                                <div class="hic-lbl">Müəllim</div>
+                            </div>
+                        </div>
+
+                        <div class="hic-courses">
+                            <div class="hic-course">
+                                <div class="hic-course-dot" style="background:#38bdf8;"></div>
+                                <div class="hic-course-name">Aqrar Texnologiyalar</div>
+                                <span class="hic-course-tag" style="background:rgba(56,189,248,0.15);color:#38bdf8;">Aktiv</span>
+                            </div>
+                            <div class="hic-course">
+                                <div class="hic-course-dot" style="background:#10b981;"></div>
+                                <div class="hic-course-name">İnformasiya Texnologiyaları</div>
+                                <span class="hic-course-tag" style="background:rgba(16,185,129,0.15);color:#10b981;">Aktiv</span>
+                            </div>
+                            <div class="hic-course">
+                                <div class="hic-course-dot" style="background:#f59e0b;"></div>
+                                <div class="hic-course-name">Tikinti və Memarlıq</div>
+                                <span class="hic-course-tag" style="background:rgba(245,158,11,0.15);color:#f59e0b;">Aktiv</span>
+                            </div>
+                            <div class="hic-course">
+                                <div class="hic-course-dot" style="background:#a78bfa;"></div>
+                                <div class="hic-course-name">Mətbəx Sənəti</div>
+                                <span class="hic-course-tag" style="background:rgba(167,139,250,0.15);color:#a78bfa;">Aktiv</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wave -->
+    <div class="hero-wave">
+        <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M0,35 C240,70 480,0 720,35 C960,70 1200,0 1440,35 L1440,70 L0,70 Z" fill="#f8fafc" id="waveFill"/>
+        </svg>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     STATS
+═══════════════════════════════════════════════════ -->
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item reveal">
+                <div class="stat-num" data-count="2000">0</div>
+                <div class="stat-label">Tələbə</div>
+            </div>
+            <div class="stat-item reveal d1">
+                <div class="stat-num" data-count="35">0</div>
+                <div class="stat-label">İxtisas</div>
+            </div>
+            <div class="stat-item reveal d2">
+                <div class="stat-num" data-count="120">0</div>
+                <div class="stat-label">Müəllim</div>
+            </div>
+            <div class="stat-item reveal d3">
+                <div class="stat-num" data-count="700">0</div>
+                <div class="stat-label">Elektron Kitab</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     PHOTOS
+═══════════════════════════════════════════════════ -->
+<section id="fotolar" class="section section-alt">
+    <div class="container">
+        <div class="section-head center reveal">
+            <div class="section-label">Mediatekanı</div>
+            <h2 class="section-title">Foto Qalereya</h2>
+            <p class="section-desc">Mərkəzimizdəki fəaliyyətlər, tədbirlər və müasir infrastrukturdan görüntülər</p>
+        </div>
+
+        <div class="gallery-masonry">
+            <div class="gallery-item reveal"><img src="http://celilabad-ih.gov.az/storage/photos/2/20%20iyul/1689846086_02554c63584e75925f2b814c6797559f.jpg" alt="DPTM" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item reveal d1"><img src="http://celilabad-ih.gov.az/storage/photos/2/20%20iyul/1689846092_686c902b745221eb261f1adac3ccfe22.jpg" alt="DPTM" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item reveal d2"><img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846086_30eb1f44cf12e90ab52469c6057ef032.jpg" alt="DPTM" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item reveal d3"><img src="http://celilabad-ih.gov.az/storage/photos/2/20%20iyul/1689846088_0588f7e2594b4dc81a83ff1ac3bcc8f9.jpg" alt="DPTM" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item reveal"><img src="http://celilabad-ih.gov.az/storage/photos/2/20%20iyul/1689846094_3cb05fceef24ff1b7e6a0231e1557ad4.jpg" alt="DPTM" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item reveal d1"><img src="http://celilabad-ih.gov.az/storage/photos/2/20%20iyul/1689846087_76dfca745f13544db4ef7aeb62384a8d.jpg" alt="DPTM" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item reveal d2"><img src="http://celilabad-ih.gov.az/storage/photos/2/20%20iyul/1689846097_bafa979cd7a1af627a6fbedbc7290dd1.jpg" alt="DPTM" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item reveal d3"><img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846089_49e8c4af4db7f012d6dd3aa59cf4f0d9.jpg" alt="DPTM" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item reveal"><img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846098_3228120e940e331a1617eaca61cbb023.jpg" alt="DPTM" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item reveal d1"><img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846095_faeeb8a3b33a80de135d3929a31cf5a6.jpg" alt="DPTM" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item reveal d2"><img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846099_d7bd414b61af3e8d82b050cbaa42f83b.jpg" alt="DPTM" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item reveal d3"><img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846100_1f2ca1b9b9dc32300d241fafc4454d64.jpg" alt="DPTM" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item reveal"><img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846101_3264d11c07e4dd82141b5d843f6babdd.jpg" alt="DPTM" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item reveal d1"><img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846102_1d379bd2b129cb503dd9c07bd20e9380.jpg" alt="DPTM" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item reveal d2"><img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846103_9a6b542b5e6431b6e01b94a8926279b5.jpg" alt="DPTM" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item reveal d3"><img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846104_e2b12497ce88fb284d6cf18d9c064aa3.jpg" alt="DPTM" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item reveal"><img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846105_d027394a1f1f4625a11f87963b0a7cbc.jpg" alt="DPTM" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item reveal d1"><img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846106_fe7dd96f5a9cf131e61313ec7e3e9a8e.jpg" alt="DPTM" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item reveal d2"><img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846106_5bc46a835b3a04c67e669bd9f59c3984.jpg" alt="DPTM" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item reveal d3"><img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846103_ea21e5270d3ffeead6dbf93bf493d08c.jpg" alt="DPTM" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item reveal"><img src="https://static.president.az/upload/1340x1020/2023/07/20/1689846104_15a777db5c160586c491c7e32328cf54.jpg" alt="DPTM" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+        </div>
+    </div>
+</section>
+
+<!--
+     VIDEO -->
+<section id="videolar" class="section">
+    <div class="container">
+        <div class="section-head center reveal">
+            <div class="section-label">Media</div>
+            <h2 class="section-title">Video Arxiv</h2>
+            <p class="section-desc">Prezident ziyarəti, açılış mərasimi və mərkəzimizlə bağlı xüsusi reportajlar</p>
+        </div>
+
+        <div class="video-grid">
+            <div class="video-card reveal">
+                <div class="video-ratio">
+                    <iframe src="https://www.youtube.com/embed/ENbjcJ9KJBg" title="Video 1" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="video-footer">
+                    <div class="video-num">01</div>
+                    <div class="video-title">Prezident Cəlilabad DPTM açılışında iştirak edib</div>
+                </div>
+            </div>
+            <div class="video-card reveal d1">
+                <div class="video-ratio">
+                    <iframe src="https://www.youtube.com/embed/mLkOQrZQjK4" title="Video 2" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="video-footer">
+                    <div class="video-num">02</div>
+                    <div class="video-title">Prezident mərkəzdə şəraitlə tanış olub</div>
+                </div>
+            </div>
+            <div class="video-card reveal d2">
+                <div class="video-ratio">
+                    <iframe src="https://www.youtube.com/embed/5DsodB_wrcw" title="Video 3" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="video-footer">
+                    <div class="video-num">03</div>
+                    <div class="video-title">Açılış mərasimindən reportaj</div>
+                </div>
+            </div>
+            <div class="video-card reveal">
+                <div class="video-ratio">
+                    <iframe src="https://www.youtube.com/embed/0bxGCGtYU-g" title="Video 4" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="video-footer">
+                    <div class="video-num">04</div>
+                    <div class="video-title">Mərkəzin rəsmi açılış xəbəri</div>
+                </div>
+            </div>
+            <div class="video-card reveal d1">
+                <div class="video-ratio">
+                    <iframe src="https://www.youtube.com/embed/D8njrz0unqU" title="Video 5" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="video-footer">
+                    <div class="video-num">05</div>
+                    <div class="video-title">Yaradıcı Zərif Əllər festivalı</div>
+                </div>
+            </div>
+            <div class="video-card reveal d2">
+                <div class="video-ratio">
+                    <iframe src="https://www.youtube.com/embed/m6EXNjfdJwM" title="Video 6" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="video-footer">
+                    <div class="video-num">06</div>
+                    <div class="video-title">Karyera və Peşə İmkanları Günü</div>
+                </div>
+            </div>
+            <div class="video-card reveal">
+                <div class="video-ratio">
+                    <iframe src="https://www.youtube.com/embed/rPprsf6uTLg" title="Video 7" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="video-footer">
+                    <div class="video-num">07</div>
+                    <div class="video-title">Prezidentin DPTM ziyarəti — 2</div>
+                </div>
+            </div>
+            <div class="video-card reveal d1">
+                <div class="video-ratio">
+                    <iframe src="https://www.youtube.com/embed/M7xqJB3OCZQ" title="Video 8" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="video-footer">
+                    <div class="video-num">08</div>
+                    <div class="video-title">Lənkəran və Cəlilabad DPTM — ASAN TV</div>
+                </div>
+            </div>
+            <div class="video-card reveal d2">
+                <div class="video-ratio">
+                    <iframe src="https://www.youtube.com/embed/HsSve2LUlVg" title="Video 9" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="video-footer">
+                    <div class="video-num">09</div>
+                    <div class="video-title">DPTM-lərə infotur təşkil olunub</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════ -->
+<footer class="footer">
+    <div class="footer-top-bar"></div>
+    <div class="container">
+        <div class="footer-main">
+            <!-- Brand col -->
+            <div class="footer-brand-col">
+                <div class="footer-logo">
+                    <div class="footer-logo-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div>
+                        <div class="footer-logo-name">Cəlilabad DPTM</div>
+                        <div class="footer-logo-sub">Rəsmi Dövlət Portalı</div>
+                    </div>
+                </div>
+                <p class="footer-desc">Gələcəyin peşəkarlarını müasir standartlarla hazırlayan, Azərbaycan Respublikasının rəsmi peşə təhsil mərkəzi.</p>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/CDPTM" target="_blank" class="footer-social fb" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" class="footer-social ig" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/" target="_blank" class="footer-social yt" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div>
+                <div class="footer-col-title">Keçidlər</div>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-angle-right"></i> Ana Səhifə</a></li>
+                    <li><a href="kitabxana.html"><i class="fas fa-angle-right"></i> Kitabxana</a></li>
+                    <li><a href="yemekxana_platformasu.html"><i class="fas fa-angle-right"></i> Yeməkxana</a></li>
+                    <li><a href="xeberler.html"><i class="fas fa-angle-right"></i> Xəbərlər</a></li>
+                    <li><a href="faq.html"><i class="fas fa-angle-right"></i> FAQ</a></li>
+                    <li><a href="login.html"><i class="fas fa-angle-right"></i> Daxil ol</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <div class="footer-col-title">Əlaqə</div>
+                <ul class="footer-contact-list">
+                    <li><i class="fas fa-map-marker-alt"></i> Göytəpə şəh., Oqtay Eynullayev küç. 2, 1514</li>
+                    <li><i class="fas fa-phone-alt"></i><a href="tel:0515530103">051 553 01 03</a></li>
+                    <li><i class="fab fa-whatsapp"></i><a href="https://wa.me/994504125795" target="_blank">WhatsApp ilə yazın</a></li>
+                    <li><i class="fas fa-envelope"></i><a href="mailto:calilabad@vet.edu.az">calilabad@vet.edu.az</a></li>
+                    <li><i class="fas fa-globe"></i><a href="#">www.calilabad.vet.edu.az</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-copy">&copy; 2026 Cəlilabad Dövlət Peşə Təhsil Mərkəzi. Bütün hüquqlar qorunur.</div>
+            <div class="footer-made">Azərbaycan Respublikası · Rəsmi Portal</div>
         </div>
     </div>
 </footer>
 
-    <script src="script.js"></script>
+<!-- ══════════════════════════════════════════════════
+     SCRIPTS
+═══════════════════════════════════════════════════ -->
+<script>
+// ── Loader — şəkilləri gözləmir, maks 2.5s
+const loader = document.getElementById('page-loader');
+function hideLoader() { loader.classList.add('out'); }
+const loaderMax = setTimeout(hideLoader, 2500);
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => { clearTimeout(loaderMax); hideLoader(); }, 1800);
+});
+
+// ── Dark mode
+const themeBtn  = document.getElementById('themeBtn');
+const themeIcon = document.getElementById('themeIcon');
+const waveFill  = document.getElementById('waveFill');
+
+function applyTheme(dark) {
+    document.body.classList.toggle('dark', dark);
+    themeIcon.className = dark ? 'fas fa-sun' : 'fas fa-moon';
+    if (waveFill) waveFill.setAttribute('fill', dark ? '#0a1628' : '#f8fafc');
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+}
+applyTheme(localStorage.getItem('theme') === 'dark');
+themeBtn.addEventListener('click', () => applyTheme(!document.body.classList.contains('dark')));
+
+// ── Navbar scroll
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+    header.classList.toggle('elevated', window.scrollY > 50);
+    document.getElementById('to-top').classList.toggle('show', window.scrollY > 400);
+});
+
+// ── Scroll to top
+document.getElementById('to-top').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+// ── Hamburger
+const burger   = document.getElementById('burger');
+const navLinks = document.getElementById('navLinks');
+burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    navLinks.classList.toggle('drawer-open');
+});
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    burger.classList.remove('open');
+    navLinks.classList.remove('drawer-open');
+}));
+
+// ── Scroll reveal
+const ro = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); ro.unobserve(e.target); } });
+}, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
+document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+// ── Counter animation
+function animCount(el) {
+    const target = parseInt(el.dataset.count);
+    const suffix = target >= 1000 ? '+' : '+';
+    const duration = 1800;
+    const step = target / (duration / 16);
+    let cur = 0;
+    const t = setInterval(() => {
+        cur = Math.min(cur + step, target);
+        el.textContent = Math.floor(cur).toLocaleString() + suffix;
+        if (cur >= target) clearInterval(t);
+    }, 16);
+}
+const co = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { animCount(e.target); co.unobserve(e.target); } });
+}, { threshold: 0.5 });
+document.querySelectorAll('.stat-num[data-count]').forEach(el => co.observe(el));
+
+// ── Lightbox
+const lb     = document.getElementById('lightbox');
+const lbImg  = document.getElementById('lb-img');
+document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('click', () => {
+        lbImg.src = item.querySelector('img').src;
+        lb.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    });
+});
+function closeLb() { lb.classList.remove('open'); document.body.style.overflow = ''; lbImg.src = ''; }
+document.getElementById('lb-close').addEventListener('click', closeLb);
+lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
+</script>
 </body>
 </html>
